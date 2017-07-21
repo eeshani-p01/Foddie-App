@@ -14,8 +14,23 @@
 //FoodieApp is the name of our App and we are defining a js variable for it
 //we are initiallizing angular here by this function and it will return some value storing in this var
 //1st argument of the function is name of app and 2nd will be having extra functionality values
-var foodieApp = angular.module('FoodieApp',[]);
+var foodieApp = angular.module('FoodieApp',['ngRoute']);  //ngRoute is additional functionality and this are called as module
+//so here we are initiallizing and adding list of modules
 // console.log(foodieApp);
+
+//Adding routes to our websites by .config (configuration) and passing a function inside it
+foodieApp.config(function($routeProvider){
+  $routeProvider            //and object defined in ngroute
+  .when('/',{
+    templateUrl:'Pages/Login.html',       //show this template when url is "www.....com/"
+    controller:"loginController"          //and this controller is to be used with this view
+  })
+  .when('/home',{
+    templateUrl:'Pages/Home.html',
+    controller:'homeController'
+  })
+
+})
 
 //.controller is used to create a controller
 foodieApp.controller('loginController',function($scope){

@@ -9,111 +9,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
     <script src="js/angular.min.js"></script>
-
+    <!-- An additional code(link) required for routing in angular -->
+    <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
 </head>
 
 <body id="app">
-    <div class="login hidden" ng-controller="loginController">
-        <div class="login-form">
-            <h3> Login </h3>
-            <form name="LoginForm">
-                <div class="form-group">
-                    <label for="user-email">Email address</label>
-                    <input type="email" class="form-control" id="user-email" placeholder="Email" name="email" required="" ng-model="user.email">
-                    <div ng-show="LoginForm.email.$error.required">Required!</div>
-                    <!--  $error is an object that is added by angular whenevr there is an error in input element-->
-                    <div ng-show="LoginForm.email.$error.email">This doesn't look like a valid email.</div>
-                </div>
-                <div class="form-group">
-                    <label for="user-password">Password</label>
-                    <input type="password" class="form-control" id="user-password" placeholder="Password" name="password" required="" ng-model="user.password" ng-minlength="6">
-                    <div ng-show="LoginForm.password.$error.minlength">Password must be atleast 6 characters long.</div>
-                    <div ng-show="LoginForm.password.$error.required">Please enter Eassword</div>
-                </div>
-                <!-- <div class='welcome-message'>Welcome, {{email}}</div> -->
-                <!--double curly braces are used to display the value of models in html, it is Data-Binding -->
-                <button type="submit" class="btn btn-default" ng-disabled="LoginForm.$invalid">Login</button>
-            </form>
-        </div>
-    </div>
-    <div class="main" ng-controller="homeController">
-        <nav class="navbar navbar-default navbar-fixed">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Foodie</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Order Online</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-        <div class="ui container">
-            <div class="hero">
-                <p>Find the best restaurants in town</p>
-            </div>
-            <div class="search-bar">
-                <form>
-                <div class="input-wrapper">
-                  <input type="text" class="form-control" placeholder="Search..." ng-model="query">
-                </div>
-                <button type="submit" class="btn btn-default">Search</button>
-              </form>
-            </div>
-
-            <!--Filter the list of restaurant a/c to search query-->
-            <div ng-repeat="restaurant in restaurants | filter:query" class="restaurant"> <!--ng-repeat is used to loop over an array object and repeat the tag -->
-                <!-- in each loop, it stores the value in restaurant variable  -->
-                    <div class="rest-wrapper">
-                        <div class="image">
-                            <img src="{{restaurant.image}}" height="100" width="100">
-                        </div>
-                        <div class="rest-info">
-                            <div class="rest-category">
-                               <small>{{restaurant.category}} </small>
-                            </div>
-                            <div class="rest-name">
-                            <strong>{{restaurant.name}}</strong>
-                            </div>
-                            <div>
-                               <strong> {{restaurant.location}}</strong>
-                            </div>
-                            <div class="rest-address">
-                                {{restaurant.address}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rest-extra">
-                        <div class="type">
-                            <div><small>Cuisines:</small></div>
-                            <div><small>Cost for Two: </small></div>
-                            <div><small>Hours:</small></div>
-                        </div>
-                        <div class="value">
-                            <div>{{restaurant.cuisines}}</div>        <!-- Filter formating like numbers, currency-->
-                            <div>₹ {{restaurant.cost | number}}</div>   <!--Modelname | Filter-->
-                            <div>{{restaurant.hours}}</div>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <strong>{{restaurant.vote}}</strong>
-                    </div>
-                </div>
-
-        </div>
-    </div>
+    <!-- Everything of a specific page  will be shown in this ngview tag -->
+    <div ng-view></div>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>
