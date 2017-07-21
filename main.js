@@ -29,12 +29,18 @@ foodieApp.config(function($routeProvider){
     templateUrl:'Pages/Home.html',
     controller:'homeController'
   })
+  .when('/restaurant/:id',{                     //:id routeparamater having diff val for dif view
+    templateUrl:'Pages/restaurant.html',
+    controller:'restController'
+  })
 
 })
 
 //.controller is used to create a controller
-foodieApp.controller('loginController',function($scope){
-
+foodieApp.controller('loginController',function($scope,$location){
+    $scope.gotoHome = function(){
+      $location.url('home');
+    }
 })
 
 foodieApp.controller('homeController',function($scope){
@@ -46,6 +52,7 @@ foodieApp.controller('homeController',function($scope){
   // $scope.number =42;       {{number}}      number is our model object
   $scope.restaurants = [
     {
+        id:'1',
         name:'',
         address:'',
         location:'',
@@ -57,6 +64,7 @@ foodieApp.controller('homeController',function($scope){
         image:''
     },
     {
+        id:'2',
         name:'Farzi Cafe',
         address:'38/42, Level 2, Block C, Inner Circle, Connought Place',
         location:'Connought Place',
@@ -68,6 +76,7 @@ foodieApp.controller('homeController',function($scope){
         image:'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
     },
     {
+      id:'3',
       name:'',
       address:'',
       location:'',
@@ -79,6 +88,7 @@ foodieApp.controller('homeController',function($scope){
       image:''
     },
     {
+      id:'4',
       name:'',
       address:'',
       location:'',
@@ -90,6 +100,7 @@ foodieApp.controller('homeController',function($scope){
       image:''
     },
     {
+      id:'5',
       name:'',
       address:'',
       location:'',
@@ -101,6 +112,7 @@ foodieApp.controller('homeController',function($scope){
       image:''
     },
     {
+      id:'6',
       name:'',
       address:'',
       location:'',
@@ -112,6 +124,7 @@ foodieApp.controller('homeController',function($scope){
       image:''
     },
     {
+      id:'7',
       name:'',
       address:'',
       location:'',
@@ -123,6 +136,7 @@ foodieApp.controller('homeController',function($scope){
       image:''
     },
     {
+      id:'8',
       name:'',
       address:'',
       location:'',
@@ -135,4 +149,99 @@ foodieApp.controller('homeController',function($scope){
     }
   ];
 
+})
+
+foodieApp.controller('restController',function($scope,$routeParams){
+    $scope.restaurantId=$routeParams.id;
+    var restaurants = [
+      {
+          name:'',
+          address:'',
+          location:'',
+          category:'',
+          vote:'',
+          cuisines:'',
+          cost:'',
+          hours:'',
+          image:''
+      },
+      {
+          name:'Farzi Cafe',
+          address:'38/42, Level 2, Block C, Inner Circle, Connought Place',
+          location:'Connought Place',
+          category:'Casual Dining, Bar',
+          vote:'4.2',
+          cuisines:'Modern Indian',
+          cost:'2200',
+          hours:'12 Noon to 12 AM (Mon-Sun)',
+          image:'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
+      },
+      {
+        name:'',
+        address:'',
+        location:'',
+        category:'',
+        vote:'',
+        cuisines:'',
+        cost:'',
+        hours:'',
+        image:''
+      },
+      {
+        name:'',
+        address:'',
+        location:'',
+        category:'',
+        vote:'',
+        cuisines:'',
+        cost:'',
+        hours:'',
+        image:''
+      },
+      {
+        name:'',
+        address:'',
+        location:'',
+        category:'',
+        vote:'',
+        cuisines:'',
+        cost:'',
+        hours:'',
+        image:''
+      },
+      {
+        name:'',
+        address:'',
+        location:'',
+        category:'',
+        vote:'',
+        cuisines:'',
+        cost:'',
+        hours:'',
+        image:''
+      },
+      {
+        name:'',
+        address:'',
+        location:'',
+        category:'',
+        vote:'',
+        cuisines:'',
+        cost:'',
+        hours:'',
+        image:''
+      },
+      {
+        name:'',
+        address:'',
+        location:'',
+        category:'',
+        vote:'',
+        cuisines:'',
+        cost:'',
+        hours:'',
+        image:''
+      }
+    ];
+    $scope.restaurant = restaurants[$routeParams.id-1];
 })

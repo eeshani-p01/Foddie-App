@@ -9,13 +9,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Foodie</a>
+                <a class="navbar-brand" href="">Foodie</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Order Online</a></li>
+                    <li><a href="#!/home">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Order Online</a></li>
+                    <li><a href="#!/">Logout</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -40,14 +42,14 @@
             <!-- in each loop, it stores the value in restaurant variable  -->
                 <div class="rest-wrapper">
                     <div class="image">
-                        <img src="{{restaurant.image}}" height="100" width="100">
+                        <img ng-src="{{restaurant.image}}" height="100" width="100">
                     </div>
                     <div class="rest-info">
                         <div class="rest-category">
                            <small>{{restaurant.category}} </small>
                         </div>
                         <div class="rest-name">
-                        <strong>{{restaurant.name}}</strong>
+                          <a ng-href="#!/restaurant/{{restaurant.id}}"><strong>{{restaurant.name}}</strong></a>
                         </div>
                         <div>
                            <strong> {{restaurant.location}}</strong>
