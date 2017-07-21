@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app='FoodieApp'>
 <!-- attribute to add angular in html file -->
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 </head>
 
 <body id="app">
-    <div class="login">
+    <div class="login hidden" ng-controller="loginController">
         <div class="login-form">
             <h3> Login </h3>
             <form name="LoginForm">
@@ -36,7 +36,7 @@
             </form>
         </div>
     </div>
-    <div class="main hidden">
+    <div class="main" ng-controller="homeController">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -63,6 +63,10 @@
         <div class="ui container">
             <div class="hero">
                 <p>Find the best restaurants in town</p>
+            </div>
+            <div ng-repeat="restaurant in restaurants"> <!--ng-repeat is used to loop over an array object and repeat the tag -->
+                <!-- in each loop, it stores the value in restaurant variable  -->
+                {{restaurant}}
             </div>
         </div>
     </div>
