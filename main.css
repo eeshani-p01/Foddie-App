@@ -1,0 +1,64 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F3E8;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.hero {
+    background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
+    background-size: cover;
+    min-height: 300px;
+    border-radius: 4px;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#app .navbar {
+    color: white;
+    background-color: #cb202d;
+}
+
+#app .navbar a {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#app .login {
+    background-color: #cb202d;
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#app .login-form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 1rem;
+    padding-top: 0;
+    border-radius: 4px;
+}
+
+/*my css*/
+input.ng-invalid.ng-touched{
+  border:1px solid red;
+}
+input.ng-valid{
+  border:1px solid green;
+}
