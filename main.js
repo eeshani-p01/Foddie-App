@@ -53,15 +53,15 @@ foodieApp.controller('homeController',function($scope){
   $scope.restaurants = [
     {
         id:'1',
-        name:'',
-        address:'',
-        location:'',
-        category:'',
-        vote:'',
-        cuisines:'',
-        cost:'',
-        hours:'',
-        image:''
+        name:'Tribute',
+        address:'89-B, Monica Complex, Ambamata Temple Road, Fateh Sagar, Udaipur',
+        location:'Fateh Sagar',
+        category:'Fine Dining',
+        vote:'4.3',
+        cuisines:'North Indian, Rajasthani, Continental',
+        cost:'1500',
+        hours:'11:30 AM to 4 PM, 7PM to 11PM',
+        image:'https://b.zmtcdn.com/data/pictures/2/18041442/f0046919f60d923d8ecb895950e9e338.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
     },
     {
         id:'2',
@@ -77,27 +77,27 @@ foodieApp.controller('homeController',function($scope){
     },
     {
       id:'3',
-      name:'',
-      address:'',
-      location:'',
-      category:'',
-      vote:'',
-      cuisines:'',
-      cost:'',
-      hours:'',
-      image:''
+      name:'Tapri Central',
+      address:' B4 E, 3rd Floor, Surana Jewellers, Opposite Central Park, C Scheme, Jaipur',
+      location:'C Scheme',
+      category:'Cafe, Quick Bites',
+      vote:'4.7',
+      cuisines:'Cafe, Fast Food, Street Food',
+      cost:'750',
+      hours:'7:30 AM to 9:45 PM',
+      image:'https://b.zmtcdn.com/data/pictures/2/101212/5f52b703513ac5e2a942a8025cc5af28.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
     },
     {
       id:'4',
-      name:'',
-      address:'',
-      location:'',
-      category:'',
-      vote:'',
-      cuisines:'',
-      cost:'',
-      hours:'',
-      image:''
+      name:'Mic & Munch',
+      address:'Near D.P Jewellers, Opposite Hanuman Temple, Bhopalpura, Udaipur',
+      location:'Bhopalpura',
+      category:'Casual Dining,Cafe',
+      vote:'4.1',
+      cuisines:'Mexican, Cafe, Italian, North Indian, Chinese',
+      cost:'650',
+      hours:'11 AM to 11 PM',
+      image:'https://b.zmtcdn.com/data/pictures/0/18400430/25f960835d2a4fde13976ca7ac13e7ad.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
     },
     {
       id:'5',
@@ -113,15 +113,15 @@ foodieApp.controller('homeController',function($scope){
     },
     {
       id:'6',
-      name:'',
-      address:'',
-      location:'',
-      category:'',
-      vote:'',
-      cuisines:'',
-      cost:'',
-      hours:'',
-      image:''
+      name:'Cafe LazyMojo',
+      address:'H 1, Lal Bahadur Nagar, S.L Marg, Malviya Nagar, Jaipur',
+      location:'Malviya Nagar',
+      category:'Cafe, Casual Dining',
+      vote:'4.3',
+      cuisines:'Cafe, Mexican, Italian, Continental',
+      cost:'800',
+      hours:'11 AM to 11PM',
+      image:'https://b.zmtcdn.com/data/pictures/1/102531/14c1fc6f345575d8061c454be04fb46a.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
     },
     {
       id:'7',
