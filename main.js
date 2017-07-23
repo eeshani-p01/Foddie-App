@@ -101,15 +101,15 @@ foodieApp.controller('homeController',function($scope){
     },
     {
       id:'5',
-      name:'',
-      address:'',
-      location:'',
-      category:'',
-      vote:'',
-      cuisines:'',
-      cost:'',
-      hours:'',
-      image:''
+      name:'Nibs Cafe',
+      address:'B-16 Durgadas Colony, Next to MGF Mall, Bhawani Singh Road, C Scheme, Jaipur',
+      location:'C Scheme',
+      category:'Cafe',
+      vote:'4.6',
+      cuisines:'Cafe, Italian, Mexican',
+      cost:'750',
+      hours:'11 AM to 10:45 PM',
+      image:'https://b.zmtcdn.com/data/reviews_photos/2e7/c433c665572b89b91c668586c2d8e2e7_1485370142.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A'
     },
     {
       id:'6',
@@ -125,27 +125,27 @@ foodieApp.controller('homeController',function($scope){
     },
     {
       id:'7',
-      name:'',
-      address:'',
-      location:'',
-      category:'',
-      vote:'',
-      cuisines:'',
-      cost:'',
-      hours:'',
-      image:''
+      name:'Jaiwana Haveli Rooftop Restaurant',
+      address:'14, Lalghat, Chandpole, Udaipur',
+      location:'Chandpole',
+      category:'Casual Dining',
+      vote:'4.2',
+      cuisines:'Rajasthani, North India, Fast Food',
+      cost:'900',
+      hours:'7:30 AM to 11:30 PM',
+      image:'https://b.zmtcdn.com/data/pictures/9/18041439/4b8619e5f480c3486d79d9daf79bb743.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
     },
     {
       id:'8',
-      name:'',
-      address:'',
-      location:'',
-      category:'',
-      vote:'',
-      cuisines:'',
-      cost:'',
-      hours:'',
-      image:''
+      name:'Replay',
+      address:'SB 57, 5th Floor, Ridhi Tower, Opposite SMS Stadium, Tonk Road, Jaipur',
+      location:'Tonk Road',
+      category:'Casual Dining',
+      vote:'4.4',
+      cuisines:'North Indian, Continental, Chinese, Italian, Mexican',
+      cost:'1500',
+      hours:'11 AM to 1 AM',
+      image:'https://b.zmtcdn.com/data/pictures/6/100306/fcf59d4e5118fe0cdeca9427212692a5.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
     }
   ];
 
