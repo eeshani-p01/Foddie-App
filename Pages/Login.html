@@ -10,7 +10,8 @@
         </div>
       </div>
       <div class="login-form hidden animated ">
-        <h3> Login </h3>
+        <img src="1.gif">
+        <h2> Login </h2>&nbsp;
         <form name="LoginForm">
             <div class="form-group">
                 <label for="user-email">Email address</label>
@@ -23,11 +24,11 @@
                 <label for="user-password">Password</label>
                 <input type="password" class="form-control" id="user-password" placeholder="Password" name="password" required="" ng-model="user.password" ng-minlength="6">
                 <div ng-show="LoginForm.password.$error.minlength">Password must be atleast 6 characters long.</div>
-                <div ng-show="LoginForm.password.$error.required">Please enter Eassword</div>
+                <div ng-show="LoginForm.password.$error.required">Please enter password</div>
             </div>
             <!-- <div class='welcome-message'>Welcome, {{email}}</div> -->
             <!--double curly braces are used to display the value of models in html, it is Data-Binding -->
-            <button type="submit" class="btn btn-default" ng-disabled="LoginForm.$invalid" ng-click="gotoHome()">Login</button>
+            <button type="submit" class="btn btn-default" ng-disabled="LoginForm.$invalid" ng-click="gotoHome()">Log in</button>
         </form>
     </div>
   </div>
