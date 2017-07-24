@@ -1,5 +1,15 @@
 <div class="login" ng-controller="loginController">
-    <div class="login-form">
+  <div class="login1">
+      <div class="logo1 animated">
+        <div class="logo animated bounceInDown">
+          <img src="foodies_logo.png">
+        </div>
+        <div class="animated bounceInUp">
+          <h1>eat good, eat Exciting</h1>
+          <span class="glyphicon glyphicon-menu-down animated bounce infinite" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="login-form hidden animated ">
         <h3> Login </h3>
         <form name="LoginForm">
             <div class="form-group">
@@ -20,4 +30,5 @@
             <button type="submit" class="btn btn-default" ng-disabled="LoginForm.$invalid" ng-click="gotoHome()">Login</button>
         </form>
     </div>
+  </div>
 </div>

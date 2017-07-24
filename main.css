@@ -24,11 +24,13 @@ body {
 
 #app .navbar {
     color: white;
-    background-color: #cb202d;
+    /*background-color: #cb202d;*/
+    background: transparent;
+    border:0;
 }
 
 #app .navbar a {
-    color: white;
+    color: orange;
 }
 
 .hidden {
@@ -36,6 +38,8 @@ body {
 }
 
 #app .login {
+    background: url('back.jpg');
+    background-size: cover;
     background-color: #cb202d;
     height: 100vh;
     min-height: 500px;
@@ -44,15 +48,49 @@ body {
     justify-content: center;
     align-items: center;
 }
+#app .login1{
+  background-color: rgba(50,150,150,0.35);
+  height:100%;
+  width:100%;
+  /*width:inherit;*/
+}
+#app .login1 .logo{
+  display: flex;
+  justify-content: center;
+  margin-top: 14rem;
+}
+
+.animated.bounceInUp{
+  margin-top: 30px;
+  letter-spacing: 2px;
+  font-family: 'Artifika',serif;
+  text-align: center;
+  font-size: 120px;
+  color:black;
+}
+.animated.bounceInUp h1{
+  font-size: 50px;
+  font-weight: bold;
+  color:rgba(38,12,9,1);
+  margin-bottom: 5px;
+}
+
+#app .login1 .logo img{
+  width:40%;
+  height:35%;
+}
 
 #app .login-form {
     width: 400px;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-color:rgba(255,255,255,0.8);
+    box-shadow: 3px 5px 5px rgba(17,4,3,1);
+    border: 1px solid black;
     padding: 1rem;
     padding-top: 0;
-    border-radius: 4px;
+    margin-top: 14rem;
+    text-align: center;
 }
 
 /*for flexes*/
@@ -61,14 +99,16 @@ body {
 }
 
 .restaurant {
-    background-color: white;
+    background-color: purple;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 2px gray;
     position: relative;
     width: 600px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
     padding: 2rem;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 .rest-wrapper {
@@ -148,4 +188,14 @@ input.ng-invalid.ng-touched{
 }
 input.ng-valid{
   border:1px solid green;
+}
+
+
+.main
+{
+  /*background-color: yellow;*/
+  background: url('back3.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
 }
