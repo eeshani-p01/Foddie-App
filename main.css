@@ -10,27 +10,23 @@ body {
 }
 
 .hero {
-    background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
-    background-size: cover;
-    min-height: 300px;
-    border-radius: 4px;
     color: white;
     font-size: 36px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-
 #app .navbar {
     color: white;
-    /*background-color: #cb202d;*/
+    background-color: #cb202d;
     background: transparent;
     border:0;
+    margin-bottom: 35px;
+    margin-right: 90px;
+    margin-left:90px;
 }
 
 #app .navbar a {
     color: orange;
+    margin-top: 10px;
 }
 
 .hidden {
@@ -102,12 +98,12 @@ form div div{
   padding-left:0.7rem;
   color:gray;
 }
-.btn.btn-default{
+.login-form .btn.btn-default{
   background-color: rgba(244,79,2,0.8);
   width:99px;
   font-size: 15px;
 }
-.btn.btn-default:hover{
+.login-form .btn.btn-default:hover{
   color:black;
   width:29%;
 }
@@ -117,7 +113,7 @@ form div div{
 }
 
 .restaurant {
-    background-color: purple;
+    background-color: white;
     border: 1px solid gray;
     box-shadow: 2px 2px 2px gray;
     position: relative;
@@ -211,9 +207,16 @@ input.ng-valid{
 
 .main
 {
-  /*background-color: yellow;*/
-  background: url('back3.jpg');
+  background-color: gray;
+  /*background: url('back8.png');*/
   background-size: cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
+
+}
+
+
+.carousel-inner img{
+  max-height:500px;
+  width:1500px;
 }
