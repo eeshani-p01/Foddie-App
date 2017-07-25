@@ -196,6 +196,16 @@ form div div{
    margin-right: 1rem;
 }
 
+.bestDish .button {
+    display: inline-block;
+    background-color:#cb202d;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
 /*my css*/
 input.ng-invalid.ng-touched{
   border:1px solid red;

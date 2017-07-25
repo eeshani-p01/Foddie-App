@@ -24,15 +24,27 @@
                 <div><small>Cuisines:</small></div>
                 <div><small>Cost for Two: </small></div>
                 <div><small>Hours:</small></div>
+                <div ng-if="restaurant.bestDish"><small>Recommended: </small></div>
             </div>
             <div class="value">
                 <div>{{restaurant.cuisines}}</div>
                 <div>₹{{restaurant.cost | number}}</div>
                 <div>{{restaurant.hours}}</div>
+                <div class="bestDish" ng-if="restaurant.bestDish">
+                    <span>{{restaurant.bestDish.name}}</span>
+                    <div ng-click="getIngredients(restaurant.bestDish.image)" class="button">Get Ingredients</div>
+                </div>
             </div>
         </div>
         <div class="rating">
             <strong>{{restaurant.vote}}</strong>
+        </div>
+        <div ng-if="ingredients">
+            <ol>
+            <li ng-repeat="ingredient in ingredients">
+            {{ingredient}}
+            </li>
+            </ol>
         </div>
     </div>
     <div ng-hide="restaurant.name">404- Restaurant Not Found!!!</div>

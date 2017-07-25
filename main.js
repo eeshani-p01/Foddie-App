@@ -88,6 +88,7 @@ foodieApp.controller('homeController',function($scope){
         cuisines:'Modern Indian',
         cost:'2200',
         hours:'12 Noon to 12 AM (Mon-Sun)',
+
         image:'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
     },
     {
@@ -166,8 +167,9 @@ foodieApp.controller('homeController',function($scope){
 
 })
 
-foodieApp.controller('restController',function($scope,$routeParams){
+foodieApp.controller('restController',function($scope,$routeParams,$http){
     $scope.restaurantId=$routeParams.id;
+    $scope.ingredients = [];
     var restaurants = [
       {
           name:'Tribute',
@@ -189,6 +191,10 @@ foodieApp.controller('restController',function($scope,$routeParams){
           cuisines:'Modern Indian',
           cost:'2200',
           hours:'12 Noon to 12 AM (Mon-Sun)',
+          bestDish: {
+            name: 'Corn Pizza',
+            image: 'http://noblepig.com/images/2016/06/Avocado-and-Three-Bean-Salad-is-perfect-for-a-summertime-barbecue-side-dish.JPG'
+          },
           image:'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
       },
       {
@@ -259,4 +265,28 @@ foodieApp.controller('restController',function($scope,$routeParams){
       }
     ];
     $scope.restaurant = restaurants[$routeParams.id-1];
+
+
+        $scope.getIngredients = function(url){
+          var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'
+              $http({
+                	'method': 'POST',
+                	'url': 'https://api.clarifai.com/v2/models/bd367be194cf45149e75f01d59f77ba7/outputs',
+                	'headers': {
+                		'Authorization': 'Key d32931f783ca4d3c8bc8503bce71e841',
+                		'Content-Type': 'application/json'
+                	},
+                	'data': data
+                }).then(
+                  function (response) {
+                		  var ingredients = response.data.outputs[0].data.concepts;
+                			for (var i =0;i<ingredients.length;i++){
+                        $scope.ingredients.push(ingredients[i].name);
+                      }
+                    },
+                  function (xhr) {
+                          console.log(xhr);
+                        }
+                  );
+        }
 })
