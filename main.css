@@ -60,7 +60,28 @@ body {
       padding:4px 6px 4px 6px;
     }
     /*home*/
-
+    .navbar-header a img{
+      margin-left: -80px;
+    }
+    .navbar-header button{
+      margin:30px -60px 0px 0px;
+    }
+}
+@media only screen and (max-width:500px){
+  ul.nav.navbar-nav.navbar-right{
+    background-color: lightgray;
+    width:30%;
+    margin-left:460px;
+    z-index:2;
+    position: absolute;
+  }
+  .navbar-default .navbar-collapse{
+    border:0;
+  }
+  ul.nav.navbar-nav.navbar-right li a{
+    border-bottom: 1px solid gray;
+    padding-left:20px;
+  }
 }
 @media only screen and (min-width: 768px){
   #app .login1 .logo img{
@@ -158,6 +179,7 @@ form div div{
     font-size: 5rem;
     color: white;
     display: flex;
+    margin-top:9.5rem;
 }
 #app .navbar {
     color: white;
@@ -300,4 +322,6 @@ input.ng-valid{
 .carousel-inner img{
   max-height:500px;
   width:1500px;
+  z-index: -1;
+  position: relative;
 }
