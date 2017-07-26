@@ -181,7 +181,7 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
           cuisines:'North Indian, Rajasthani, Continental',
           cost:'1500',
           hours:'11:30 AM to 4 PM, 7PM to 11PM',
-          image:'https://b.zmtcdn.com/data/pictures/2/18041442/f0046919f60d923d8ecb895950e9e338.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
+          image:'https://b.zmtcdn.com/data/pictures/2/18041442/f0046919f60d923d8ecb895950e9e338.jpg?output-format=webp'
       },
       {
           name:'Farzi Cafe',
@@ -207,7 +207,7 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'Cafe, Fast Food, Street Food',
         cost:'750',
         hours:'7:30 AM to 9:45 PM',
-        image:'https://b.zmtcdn.com/data/pictures/2/101212/5f52b703513ac5e2a942a8025cc5af28.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
+        image:'https://b.zmtcdn.com/data/pictures/2/101212/18a8a6d5a56434d02ef5915da77b19b8.jpg?output-format=webp'
       },
       {
         name:'Mic & Munch',
@@ -218,7 +218,7 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'Mexican, Cafe, Italian, North Indian, Chinese',
         cost:'650',
         hours:'11 AM to 11 PM',
-        image:'https://b.zmtcdn.com/data/pictures/0/18400430/25f960835d2a4fde13976ca7ac13e7ad.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
+        image:'https://b.zmtcdn.com/data/pictures/0/18400430/25f960835d2a4fde13976ca7ac13e7ad.jpg?output-format=webp'
       },
       {
         name:'Nibs Cafe',
@@ -229,7 +229,7 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'Cafe, Italian, Mexican',
         cost:'750',
         hours:'11 AM to 10:45 PM',
-        image:'https://b.zmtcdn.com/data/reviews_photos/2e7/c433c665572b89b91c668586c2d8e2e7_1485370142.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A'
+        image:'http://diningwithnoelle.com/wp-content/uploads/2015/12/photo-1-3-1000x520.jpg'
       },
       {
         name:'Cafe LazyMojo',
@@ -240,7 +240,7 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'Cafe, Mexican, Italian, Continental',
         cost:'800',
         hours:'11 AM to 11PM',
-        image:'https://b.zmtcdn.com/data/pictures/1/102531/14c1fc6f345575d8061c454be04fb46a.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
+        image:'https://b.zmtcdn.com/data/pictures/chains/1/102531/b2b174c4d4852509c1895c8391f65b00.jpg?output-format=webp'
       },
       {
         name:'Jaiwana Haveli Rooftop Restaurant',
@@ -251,7 +251,7 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'Rajasthani, North India, Fast Food',
         cost:'900',
         hours:'7:30 AM to 11:30 PM',
-        image:'https://b.zmtcdn.com/data/pictures/9/18041439/4b8619e5f480c3486d79d9daf79bb743.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
+        image:'https://b.zmtcdn.com/data/pictures/9/18041439/4b8619e5f480c3486d79d9daf79bb743.jpg?output-format=webp'
       },
       {
         name:'Replay',
@@ -262,13 +262,11 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'North Indian, Continental, Chinese, Italian, Mexican',
         cost:'1500',
         hours:'11 AM to 1 AM',
-        image:'https://b.zmtcdn.com/data/pictures/6/100306/fcf59d4e5118fe0cdeca9427212692a5.jpg?fit=around%7C80%3A80&crop=80%3A80%3B%2A%2C%2A'
+        image:'https://b.zmtcdn.com/data/pictures/6/100306/e1f5eb8c9bac9a7ee00e3be677a5fc8b.jpg?output-format=webp'
       }
     ];
     $scope.restaurant = restaurants[$routeParams.id-1];
-
-
-        $scope.getIngredients = function(url){
+      $scope.getIngredients = function(url){
           var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'
               $http({
                 	'method': 'POST',
@@ -289,5 +287,18 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
                           console.log(xhr);
                         }
                   );
+
+            $('.bestImage').addClass('hidden');
+
+        }
+        $scope.show = function(){
+          $('.bestImage').removeClass('hidden');
         }
 })
+
+$('.recommend #myButton').on('click', function () {
+    var $btn = $(this).button('loading')
+    console.log('loading');
+    // business logic...
+    $btn.button('reset')
+  })

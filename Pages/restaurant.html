@@ -23,28 +23,38 @@
                 <div><small>Cost for Two: </small></div>
                 <div><small>Hours:</small></div>
                 <div><small>Address:</small></div>
-                <div ng-if="restaurant.bestDish"><small>Recommended: </small></div>
             </div>
             <div class="value">
                 <div>{{restaurant.cuisines}}</div>
                 <div>₹{{restaurant.cost | number}}</div>
                 <div>{{restaurant.hours}}</div>
                 <div class="rest-address">{{restaurant.address}}</div>
-                <div class="bestDish" ng-if="restaurant.bestDish">
-                    <span>{{restaurant.bestDish.name}}</span>
-                    <div ng-click="getIngredients(restaurant.bestDish.image)" class="button">Get Ingredients</div>
-                </div>
             </div>
         </div>
-
-        <div class="ingredients" ng-if="ingredients">
-            <ul>
-            <li ng-repeat="ingredient in ingredients">
-            {{ingredient}}
-            </li>
-          </ul>
-        </div>
+        <div ng-if="restaurant.bestDish" class="recommend">
+            <div  class="type"><small>What people Love here ? </small></div>
+            <div class="bestDish value">
+              <span>{{restaurant.bestDish.name}}</span>
+              <div class="button">
+                <div ng-click="show()" class="button_view">View</div>
+                <div ng-click="getIngredients(restaurant.bestDish.image)" class="button_get">
+                  <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+                    Get Ingredients
+                  </button>
+                </div>
+            </div>
+            <div class="ingredients" ng-if="ingredients">
+              <ul>
+                <li ng-repeat="ingredient in ingredients">
+                {{ingredient}}
+                </li>
+              </ul>
+            </div>
+              <div class="bestImage hidden">
+                <img src="{{restaurant.bestDish.image}}">
+              </div>
+          </div>
+      </div>
+      <div ng-hide="restaurant.name">404- Restaurant Not Found!!!</div>
     </div>
-    <div ng-hide="restaurant.name">404- Restaurant Not Found!!!</div>
-  </div>
 </div>
