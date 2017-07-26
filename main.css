@@ -7,33 +7,94 @@
 body {
     background-color: #F3F3E8;
     font-family: Helvetica, Arial, sans-serif;
+    width:100%;
+    height: 100%;
+    font-size: 10px;
 }
+@media all and (max-width: 768px){
+  .animated.bounceInUp{
+    margin-top: 30px;
+    font-size: 5rem;
+  }
+  .animated.bounceInUp h1{
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
 
-.hero {
-    color: white;
-    font-size: 36px;
-    display: flex;
-}
-#app .navbar {
-    color: white;
-    background-color: #cb202d;
-    background: transparent;
-    border:0;
-    margin-bottom: 35px;
-    margin-right: 90px;
-    margin-left:90px;
-}
+  #app .login1 .logo img{
+    height:60px;
+    width:230px;
+    margin-top: 14rem;
+  }
+  #app .login-form img{
+      width:40%;
+      margin-top:-8px;
+  }
 
-#app .navbar a {
-    color: orange;
-    margin-top: 10px;
-}
+  #app .login-form {
+      width: 60%;
+      height:56%;
+      padding: 2rem 2rem 2rem 2rem;
+      margin-top: 10rem;
+  }
 
-.hidden {
-    display: none;
-}
+  .login-form h2{
+      font-size: 180%;
+      margin-top: 8px;
+      margin-bottom: 2px;
+    }
+    form div div{
+      font-size: 0.8rem;
+      margin-bottom: -10px;
+    }
+    .form-group label{
+      font-size:1.1rem;
+    }
+    .form-group input.form-control{
+      font-size: 10px;
+      height:20px;
+    }
+    .login-form .btn.btn-default{
+      font-size: 12px;
+      margin-top: 1.5rem;
+      padding:4px 6px 4px 6px;
+    }
+    /*home*/
 
+}
+@media only screen and (min-width: 768px){
+  #app .login1 .logo img{
+    width:40%;
+    height:35%;
+    margin-top: 14rem;
+  }
+  .animated.bounceInUp h1{
+    font-size: 5.8rem;
+    margin-bottom: 5px;
+  }
+
+  .animated.bounceInUp{
+    font-size: 12rem;
+  }
+
+  #app .login-form {
+      width: 26%;
+      padding: 2rem 2rem 2rem 2rem;
+      margin-top: 10rem;
+  }
+  form div div{
+    font-size: 13px;
+  }
+  .login-form .btn.btn-default{
+    width:99px;
+    font-size: 15px;
+  }
+  /*home page*/
+
+}
 #app .login {
+    width:100%;
+    height:100%;
     background: url('back.jpg');
     background-size: cover;
     background-color: #cb202d;
@@ -53,65 +114,72 @@ body {
 #app .login1 .logo{
   display: flex;
   justify-content: center;
-  margin-top: 14rem;
 }
-
 .animated.bounceInUp{
   margin-top: 30px;
   letter-spacing: 2px;
   font-family: 'Artifika',serif;
   text-align: center;
-  font-size: 120px;
   color:black;
 }
 .animated.bounceInUp h1{
-  font-size: 50px;
   font-weight: bold;
   color:rgba(38,12,9,1);
-  margin-bottom: 5px;
 }
-
-#app .login1 .logo img{
-  width:40%;
-  height:35%;
-}
-
 #app .login-form {
-    width: 400px;
     margin-left: auto;
     margin-right: auto;
     background-color:rgba(255,255,255,0.8);
     box-shadow: 3px 5px 5px rgba(17,4,3,1);
     border: 1px solid black;
-    padding: 2rem 2rem 2rem 2rem;
-    margin-top: 10rem;
     text-align: center;
     font-family: 'Artifika',serif;
-
 }
+
 .login-form h2{
   color:rgba(24,56,28,1);
 }
 form div div{
   text-align: left;
-  font-size: 13px;
   padding-left:0.7rem;
   color:gray;
 }
 .login-form .btn.btn-default{
   background-color: rgba(244,79,2,0.8);
-  width:99px;
-  font-size: 15px;
 }
-.login-form .btn.btn-default:hover{
+.login-form .btn.btn-default:hover,.login-form .btn.btn-default:focus{
   color:black;
-  width:29%;
 }
+
+
 /*for flexes*/
 .hero {
     margin-bottom: 2rem;
+    font-size: 5rem;
+    color: white;
+    display: flex;
+}
+#app .navbar {
+    color: white;
+    background-color: #cb202d;
+    background: transparent;
+    border:0;
+    margin-bottom: 35px;
+    margin-right: 90px;
+    margin-left:90px;
 }
 
+#app .navbar a {
+    color: orange;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/*for restaurant*/
 .restaurant {
     background-color: white;
     border: 1px solid gray;
@@ -218,11 +286,14 @@ input.ng-valid{
 .main
 {
   background-color: gray;
-  /*background: url('back8.png');*/
+  background: url('back8.png');
   background-size: cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
-
+  /*background-position: center;*/
+  width:100%;
+  height:100%;
+  min-width: 768px;
 }
 
 
