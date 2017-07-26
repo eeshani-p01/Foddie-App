@@ -6,7 +6,7 @@
 
 body {
     background-color: #F3F3E8;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Artifika',Helvetica, Arial, sans-serif;
     width:100%;
     height: 100%;
     font-size: 10px;
@@ -65,6 +65,10 @@ body {
     }
     .navbar-header button{
       margin:30px -60px 0px 0px;
+    }
+
+    .restaurant.rest {
+      margin:110px 0px 0px 0px;
     }
 }
 @media only screen and (max-width:500px){
@@ -173,7 +177,7 @@ form div div{
 }
 
 
-/*for flexes*/
+/*for header*/
 .hero {
     margin-bottom: 2rem;
     font-size: 5rem;
@@ -183,9 +187,10 @@ form div div{
 }
 #app .navbar {
     color: white;
-    background-color: #cb202d;
-    background: transparent;
+    background-color:brown;
+    /*background: transparent;*/
     border:0;
+    height: 80px;
     margin-bottom: 35px;
     margin-right: 90px;
     margin-left:90px;
@@ -201,7 +206,7 @@ form div div{
     display: none;
 }
 
-/*for restaurant*/
+/*for flexes*/
 .restaurant {
     background-color: white;
     border: 1px solid gray;
@@ -217,7 +222,7 @@ form div div{
 
 .rest-wrapper {
     display: flex;
-    font-family: sans-serif;
+    font-family: 'Artifika';
 }
 
 .rest-wrapper .image {
@@ -256,7 +261,7 @@ form div div{
      margin-right: 2rem;
 }
 
-.restaurant .rating {
+.rating {
     color: white;
     background-color: #5BA829;
     position: absolute;
@@ -324,4 +329,50 @@ input.ng-valid{
   width:1500px;
   z-index: -1;
   position: relative;
+}
+/*for restaurant*/
+.rest {
+    box-shadow: 2px 2px 2px gray;
+    border: 1px solid lightgray;
+    position: relative;
+    width:60%;
+    margin-left:15rem;
+    margin-top: 15rem;
+    margin-right:-105rem;
+    min-width: 700px;
+}
+.rest-wrapper.wrapper1{
+  display: block;
+}
+.rest-wrapper.wrapper1 .image img{
+  width:101%;
+  height:38rem;
+  border-radius: 0;
+  border: 1px solid brown;
+}
+.wrapper1 .rest-name{
+  font-size: 3.8rem;
+  padding: 5px 0px 15px 5px;
+}
+.wrapper1 .rating{
+  margin: 18px 15px 5px 0px;
+}
+.wrapper1 .rest-category{
+  padding: 12px 0px 0px 12px;
+  font-size: 1.6rem;
+}
+.rest .rest-extra{
+  font-size: 1.4rem;
+  padding:15px 0px 0px 20px;
+}
+.rest .rest-extra .type{
+  color:black;
+}
+.rest .rest-extra .value{
+  color:#89959b;
+}
+.rest .ingredients{
+  font-size: 1.5rem;
+  margin: 50px 0px 0px 0px;
+  text-align: center;
 }

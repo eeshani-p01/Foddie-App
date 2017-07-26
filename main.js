@@ -40,6 +40,7 @@ foodieApp.config(function($routeProvider){
 foodieApp.controller('loginController',function($scope,$location){
     $scope.gotoHome = function(){
       $location.url('home');
+      $('#app .navbar').removeClass('hidden');
     }
     $('.glyphicon.glyphicon-menu-down').hover(function(){
       $('.glyphicon-menu-down').removeClass('infinite')
