@@ -182,6 +182,10 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
           cuisines:'North Indian, Rajasthani, Continental',
           cost:'1500',
           hours:'11:30 AM to 4 PM, 7PM to 11PM',
+          bestDish: {
+            name: 'Kulfi',
+            image: 'http://farki.in/images/kulfiandcandy/chocolate_kulfi.jpg'
+          },
           image:'https://b.zmtcdn.com/data/pictures/2/18041442/f0046919f60d923d8ecb895950e9e338.jpg?output-format=webp'
       },
       {
@@ -219,6 +223,10 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'Mexican, Cafe, Italian, North Indian, Chinese',
         cost:'650',
         hours:'11 AM to 11 PM',
+        bestDish: {
+          name: 'Nachos',
+          image: 'https://omnomnomtreats.files.wordpress.com/2014/05/loaded-vegetarian-nachos1.jpg'
+        },
         image:'https://b.zmtcdn.com/data/pictures/0/18400430/25f960835d2a4fde13976ca7ac13e7ad.jpg?output-format=webp'
       },
       {
@@ -230,6 +238,10 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'Cafe, Italian, Mexican',
         cost:'750',
         hours:'11 AM to 10:45 PM',
+        bestDish: {
+          name: 'Alfrado Pasta',
+          image: 'http://topsecretrecipes.com/images/P/olive-garden-alfredo-pasta-copycat-recipe.jpg'
+        },
         image:'http://diningwithnoelle.com/wp-content/uploads/2015/12/photo-1-3-1000x520.jpg'
       },
       {
@@ -241,6 +253,10 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'Cafe, Mexican, Italian, Continental',
         cost:'800',
         hours:'11 AM to 11PM',
+        bestDish: {
+          name: 'French Vanila Coffee',
+          image: 'https://cookinformycaptain.files.wordpress.com/2012/03/img_4426x.jpg'
+        },
         image:'https://b.zmtcdn.com/data/pictures/chains/1/102531/b2b174c4d4852509c1895c8391f65b00.jpg?output-format=webp'
       },
       {
@@ -252,6 +268,10 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'Rajasthani, North India, Fast Food',
         cost:'900',
         hours:'7:30 AM to 11:30 PM',
+        bestDish: {
+          name: 'Butter Chicken',
+          image: 'http://www.akbarsown.com/wp-content/uploads/2015/05/butter-chicken-1.jpg'
+        },
         image:'https://b.zmtcdn.com/data/pictures/9/18041439/4b8619e5f480c3486d79d9daf79bb743.jpg?output-format=webp'
       },
       {
@@ -263,6 +283,10 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'North Indian, Continental, Chinese, Italian, Mexican',
         cost:'1500',
         hours:'11 AM to 1 AM',
+        bestDish: {
+          name: 'Pasta',
+          image: 'http://www.thegoodshoppingguide.com/wp-content/uploads/2013/03/pasta.jpg'
+        },
         image:'https://b.zmtcdn.com/data/pictures/6/100306/e1f5eb8c9bac9a7ee00e3be677a5fc8b.jpg?output-format=webp'
       }
     ];
@@ -280,8 +304,12 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
                 }).then(
                   function (response) {
                 		  var ingredients = response.data.outputs[0].data.concepts;
+                      console.log(ingredients);
                 			for (var i =0;i<ingredients.length;i++){
-                        $scope.ingredients.push(ingredients[i].name);
+                        if(ingredients[i].value>0.75)
+                        {
+                          $scope.ingredients.push(ingredients[i].name);
+                        }
                       }
                     },
                   function (xhr) {

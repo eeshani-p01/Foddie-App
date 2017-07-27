@@ -61,11 +61,15 @@ body {
     }
     /*home*/
     .navbar-header button{
-      margin:30px -60px 0px 0px;
+      margin:15px 100px 0px 0px;
+      background-color: orange;
     }
 
     .restaurant.rest {
       margin:110px 0px 0px 0px;
+    }
+    .carousel-inner{
+        margin-left:-10px;
     }
 }
 @media only screen and (max-width:500px){
@@ -329,16 +333,16 @@ input.ng-valid{
   border:1px solid green;
 }
 .main1.active1{
-  /*background-color:rgba(255,255,255,0.4);*/
+  background-color:rgba(255,255,255,0.2);
 }
-.main1.active1{
-  background-image: url('back8.png');
+.main.active1{
+  background-image: url('back9.jpg');
   background-size: cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
 }
 .main
-{ z-index: -1;
+{
   background-color:#e3e3e3  ;
   /*background-position: center;*/
   width:100%;
@@ -347,11 +351,11 @@ input.ng-valid{
 }
 .carousel-inner img{
   max-height:600px;
-  width:;
   z-index: -1;
   position: relative;
+  min-width: 600px;
   width: 1308px;
-  margin:20px 20px 20px 20px
+  margin:20px 20px 20px 20px;
 }
 /*for restaurant*/
 .rest {
@@ -395,12 +399,20 @@ input.ng-valid{
   color:#89959b;
 }
 .rest .ingredients{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin: 50px 0px 0px 0px;
   text-align: center;
+  background: url('Capture.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  color:brown;
+  padding-top:10px;
+  padding-bottom: 10px;
 }
-.rest .ingredients ul li{
+.rest .ingredients li{
   list-style-type: none;
+  padding: 3px;
 }
 .rest .recommend{
   padding: 15px;
