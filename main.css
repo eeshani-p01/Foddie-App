@@ -121,7 +121,7 @@ body {
 #app .login {
     width:100%;
     height:100%;
-    background: url('back.jpg');
+    background: url('img/back.jpg');
     background-size: cover;
     background-color: #cb202d;
     height: 100vh;
@@ -336,8 +336,9 @@ input.ng-valid{
   background-color:rgba(255,255,255,0.2);
 }
 .main.active1{
-  background-image: url('back9.jpg');
+  background-image: url('img/Capture1.png');
   background-size: cover;
+  background-position:bottom;
   background-repeat:no-repeat;
   background-attachment: fixed;
 }
@@ -358,6 +359,16 @@ input.ng-valid{
   margin:20px 20px 20px 20px;
 }
 /*for restaurant*/
+.rest1{
+  background-image: url('img/backn.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+.rest1 .rest2{
+  background-color: rgba(140,102,53,0.5);
+  padding: 2px;
+}
 .rest {
     box-shadow: 2px 2px 2px gray;
     border: 1px solid lightgray;
@@ -402,7 +413,7 @@ input.ng-valid{
   font-size: 1.8rem;
   margin: 50px 0px 0px 0px;
   text-align: center;
-  background: url('Capture.jpg');
+  background: url('img/Capture.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
