@@ -336,7 +336,6 @@ input.ng-valid{
   background-size: cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
-  
 }
 .main
 {
@@ -410,3 +409,8 @@ input.ng-valid{
 .rest .recommend .value{
   font-size: 2.2rem;
   }
+.rest .recommend .bestImage img{
+  margin:34px 0px 0px 0px;
+  width: 100%;
+  border:2px  solid #cb204f;
+}

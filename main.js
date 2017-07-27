@@ -290,10 +290,12 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
                   );
 
             $('.bestImage').addClass('hidden');
-
+            $('.ingredients').removeClass('hidden');
         }
         $scope.show = function(){
           $('.bestImage').removeClass('hidden');
+          $('.ingredients').addClass('hidden');
+
         }
 
         $('.recommend #myButton').on('click', function () {
@@ -303,6 +305,8 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
             $btn.button('reset')
           })
 })
+
+
 $(window).on("scroll", function() {
     if($(window).scrollTop() > 100) {
         $("#app .navbar").addClass("active");

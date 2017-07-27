@@ -42,19 +42,19 @@
                     Get Ingredients
                   </button>
                 </div>
-            </div>
-            <div class="ingredients" ng-if="ingredients">
-              <ul>
-                <li ng-repeat="ingredient in ingredients">
-                {{ingredient}}
-                </li>
-              </ul>
-            </div>
+              </div>
+              <div class="ingredients " ng-if="ingredients">
+                <ul>
+                  <li ng-repeat="ingredient in ingredients">
+                  {{ingredient}}
+                  </li>
+                </ul>
+              </div>
               <div class="bestImage hidden">
                 <img src="{{restaurant.bestDish.image}}">
               </div>
+            </div>
           </div>
-      </div>
       <div ng-hide="restaurant.name">404- Restaurant Not Found!!!</div>
     </div>
 </div>
