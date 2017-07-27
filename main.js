@@ -42,6 +42,7 @@ foodieApp.controller('loginController',function($scope,$location){
       $location.url('home');
       $('#app .navbar').removeClass('hidden');
     }
+    $('#app .navbar').addClass('hidden');
     $('.glyphicon.glyphicon-menu-down').hover(function(){
       $('.glyphicon-menu-down').removeClass('infinite')
       // console.log('toogle');
@@ -294,11 +295,23 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         $scope.show = function(){
           $('.bestImage').removeClass('hidden');
         }
-})
 
-$('.recommend #myButton').on('click', function () {
-    var $btn = $(this).button('loading')
-    console.log('loading');
-    // business logic...
-    $btn.button('reset')
-  })
+        $('.recommend #myButton').on('click', function () {
+            var $btn = $(this).button('loading')
+            console.log('loading');
+            // business logic...
+            $btn.button('reset')
+          })
+})
+$(window).on("scroll", function() {
+    if($(window).scrollTop() > 100) {
+        $("#app .navbar").addClass("active");
+        $(".main").addClass('active1');
+        $(".main1").addClass('active1');
+    } else {
+        //remove the background property so it comes transparent again (defined in your css)
+       $("#app .navbar").removeClass("active");
+       $(".main").removeClass('active1');
+       $(".main1").removeClass('active1');
+    }
+});

@@ -60,9 +60,6 @@ body {
       padding:4px 6px 4px 6px;
     }
     /*home*/
-    .navbar-header a img{
-      margin-left: -80px;
-    }
     .navbar-header button{
       margin:30px -60px 0px 0px;
     }
@@ -183,25 +180,35 @@ form div div{
     font-size: 5rem;
     color: white;
     display: flex;
-    margin-top:9.5rem;
+    margin-top:4rem;
 }
 #app .navbar {
-    color: white;
-    background-color:brown;
+    /*background:#e3e3e3;*/
     /*background: transparent;*/
+    background: linear-gradient(360deg,#c3c3c3,white);
     border:0;
-    height: 80px;
-    margin-bottom: 35px;
-    margin-right: 90px;
-    margin-left:90px;
+    padding-left: 15px;
 }
-
+#app .navbar.active{
+  background: linear-gradient(360deg,#c3c3c3,white);
+  border-bottom: 1px solid gray;
+  /*width:20px;*/
+  height: 62px;
+  padding:0px 30px 0px 30px;
+}
+#app .navbar.active li a{
+  color:gray;
+  padding-top: 22px;
+  }
 #app .navbar a {
     color: orange;
-    margin-top: 10px;
-    font-size: 1.5rem;
+    /*margin-top: 10px;*/
+    font-size: 1.6rem;
+    font-weight: bold;
 }
-
+.navbar-header .navbar-brand{
+  padding:5px 0px 0px 10px;
+}
 .hidden {
     display: none;
 }
@@ -209,7 +216,7 @@ form div div{
 /*for flexes*/
 .restaurant {
     background-color: white;
-    border: 1px solid gray;
+    border: 1px solid orange;
     box-shadow: 2px 2px 2px gray;
     position: relative;
     width: 600px;
@@ -222,20 +229,20 @@ form div div{
 
 .rest-wrapper {
     display: flex;
-    font-family: 'Artifika';
 }
 
 .rest-wrapper .image {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
 
 .rest-wrapper .image img {
     border-radius: 4px;
 }
 
-.rest-wrapper .rest-name {
+.rest-wrapper .rest-name a{
     font-size: 24px;
-    color: #cb202d;
+    /*color: #cb202d;*/
+    color:darkorange;
 }
 
 .rest-wrapper .rest-category {
@@ -321,27 +328,31 @@ input.ng-invalid.ng-touched{
 input.ng-valid{
   border:1px solid green;
 }
-
-
-.main
-{
-  background-color: gray;
-  background: url('back8.png');
+.main1.active1{
+  /*background-color:rgba(255,255,255,0.4);*/
+}
+.main.active1{
+  background-image: url('back8.png');
   background-size: cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
+  
+}
+.main
+{
+  background-color:#e3e3e3  ;
   /*background-position: center;*/
   width:100%;
   height:100%;
   min-width: 768px;
 }
-
-
 .carousel-inner img{
-  max-height:500px;
-  width:1500px;
+  max-height:600px;
+  width:;
   z-index: -1;
   position: relative;
+  width: 1308px;
+  margin:20px 20px 20px 20px
 }
 /*for restaurant*/
 .rest {
