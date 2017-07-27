@@ -331,14 +331,14 @@ input.ng-valid{
 .main1.active1{
   /*background-color:rgba(255,255,255,0.4);*/
 }
-.main.active1{
+.main1.active1{
   background-image: url('back8.png');
   background-size: cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
 }
 .main
-{
+{ z-index: -1;
   background-color:#e3e3e3  ;
   /*background-position: center;*/
   width:100%;
@@ -398,6 +398,9 @@ input.ng-valid{
   font-size: 1.5rem;
   margin: 50px 0px 0px 0px;
   text-align: center;
+}
+.rest .ingredients ul li{
+  list-style-type: none;
 }
 .rest .recommend{
   padding: 15px;

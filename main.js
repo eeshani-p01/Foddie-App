@@ -291,19 +291,18 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
 
             $('.bestImage').addClass('hidden');
             $('.ingredients').removeClass('hidden');
+                var $btn = $('#myButton');
+                $btn.button('loading');
+                setTimeout(function(){
+                  $btn.button('reset');
+                },1000);
         }
         $scope.show = function(){
           $('.bestImage').removeClass('hidden');
           $('.ingredients').addClass('hidden');
-
         }
 
-        $('.recommend #myButton').on('click', function () {
-            var $btn = $(this).button('loading')
-            console.log('loading');
-            // business logic...
-            $btn.button('reset')
-          })
+
 })
 
 

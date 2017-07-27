@@ -38,7 +38,7 @@
               <div class="button">
                 <div ng-click="show()" class="button_view">View</div>
                 <div ng-click="getIngredients(restaurant.bestDish.image)" class="button_get">
-                  <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+                  <button type="button" id="myButton" data-loading-text="getting..." class="btn btn-primary" autocomplete="off">
                     Get Ingredients
                   </button>
                 </div>
@@ -51,7 +51,7 @@
                 </ul>
               </div>
               <div class="bestImage hidden">
-                <img src="{{restaurant.bestDish.image}}">
+                <img ng-src="{{restaurant.bestDish.image}}">
               </div>
             </div>
           </div>
