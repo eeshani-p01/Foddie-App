@@ -194,14 +194,14 @@ form div div{
     padding-left: 15px;
 }
 #app .navbar.active{
-  background: linear-gradient(360deg,#c3c3c3,white);
+  background: linear-gradient(360deg,rgba(13,0,0,0.8),#c3c3c3);
   border-bottom: 1px solid gray;
   /*width:20px;*/
   height: 62px;
   padding:0px 30px 0px 30px;
 }
 #app .navbar.active li a{
-  color:gray;
+  color:white;
   padding-top: 22px;
   }
 #app .navbar a {
@@ -366,18 +366,21 @@ input.ng-valid{
   background-attachment: fixed;
 }
 .rest1 .rest2{
-  background-color: rgba(140,102,53,0.5);
+  background-color: rgba(140,102,78,0.35);
+  /*background-color: rgba(0,0,0,0.1);*/
+  /*background-color: rgba(255,255,255,0.2);*/
   padding: 2px;
 }
 .rest {
-    box-shadow: 2px 2px 2px gray;
-    border: 1px solid lightgray;
+    box-shadow: 2px 2px 2px brown;
+    border: 0.1rem solid brown;
     position: relative;
     width:60%;
     margin-left:15rem;
     margin-top: 15rem;
     margin-right:-105rem;
     min-width: 700px;
+    border-radius: 10px;
 }
 .rest-wrapper.wrapper1{
   display: block;
@@ -385,11 +388,13 @@ input.ng-valid{
 .rest-wrapper.wrapper1 .image img{
   width:101%;
   height:38rem;
-  border-radius: 0;
+  /*border-radius: 0;*/
   border: 1px solid brown;
 }
 .wrapper1 .rest-name{
   font-size: 3.8rem;
+  text-shadow: 0px 1px 1px black;
+  color:orange;
   padding: 5px 0px 15px 5px;
 }
 .wrapper1 .rating{
@@ -408,6 +413,27 @@ input.ng-valid{
 }
 .rest .value{
   color:#89959b;
+}
+
+.rest .features{
+  display: flex;
+  font-size: 2.1rem;
+  border-top: 1px solid #e3e3e3;
+  padding:20px 0px 20px 0px;
+}
+.rest .feature{
+  margin-left:50px;
+  margin-right: 140px;
+}
+.rest .feature div{
+
+}
+.rest .feature ul{
+  font-size: 1.4rem;
+  color:rgba(0,12,0,0.7);
+  list-style-image:url('img/tick.png');
+  /*list-style-type:no;*/
+  margin-left: -18px;
 }
 .rest .ingredients{
   font-size: 1.8rem;
@@ -431,6 +457,19 @@ input.ng-valid{
 }
 .rest .recommend .type{
   font-size: 2rem;
+}
+.rest .recommend .val{
+  font-size: 1.7rem;
+  margin:0px 0rem 1rem 0.5rem;
+  color: #89959b;
+}
+.rest .recommend .type #type1{
+    padding-left: 1.5rem;
+    font-size: 1.9rem;
+}
+.recommend .value{
+  padding-left: 1.7rem;
+
 }
 .rest .recommend .value{
   font-size: 2.2rem;

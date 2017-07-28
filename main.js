@@ -186,6 +186,9 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
             name: 'Kulfi',
             image: 'http://farki.in/images/kulfiandcandy/chocolate_kulfi.jpg'
           },
+          Highlights:["Full Bar Available", "Outdoor Seating", "Smoking Area", "Luxury Dining" ],
+          Featured_Collections:["Romantic"," Meat cravings", "Lake view"],
+          Recommend:'Manchurian, Gatta Curry, Hara Bhara Kebab, Kulfi, Paneer Tikka Masala, Tomato Soup',
           image:'https://b.zmtcdn.com/data/pictures/2/18041442/f0046919f60d923d8ecb895950e9e338.jpg?output-format=webp'
       },
       {

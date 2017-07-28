@@ -21,7 +21,7 @@
             <div class="type">
                 <div><small>Cuisines:</small></div>
                 <div><small>Cost for Two: </small></div>
-                <div><small>Hours:</small></div>
+                <div><small>Opening Hours:</small></div>
                 <div><small>Address:</small></div>
             </div>
             <div class="value">
@@ -31,8 +31,30 @@
                 <div class="rest-address">{{restaurant.address}}</div>
             </div>
         </div>
+        <div class="features">
+          <div class="feature">
+            <div><small>Highlights</small></div>
+              <ul>
+                <li ng-repeat="highlight in restaurant.Highlights">
+                  {{highlight}}
+                </li>
+              </ul>
+            </div>
+            <div class="feature">
+              <div><small>Featured in Collections</small></div>
+              <ul style="color:#cb202d;list-style-image:none;">
+                <li ng-repeat="feature in restaurant.Featured_Collections">
+                  {{feature}}
+                </li>
+              </ul>
+            </div>
+          </div>
         <div ng-if="restaurant.bestDish" class="recommend">
-            <div  class="type"><small>What people Love here ? </small></div>
+            <div  class="type">
+              <div>What People Love here ?</div>
+              <div class="val"><small>{{restaurant.Recommend}}</small></div>
+              <div id="type1"><small>Recommended:</small></div>
+            </div>
             <div class="bestDish value">
               <span>{{restaurant.bestDish.name}}</span>
               <div class="button">
