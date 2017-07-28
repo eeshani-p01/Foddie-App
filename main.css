@@ -220,15 +220,17 @@ form div div{
 /*for flexes*/
 .restaurant {
     background-color: white;
-    border: 1px solid orange;
-    box-shadow: 2px 2px 2px gray;
+    border: 2px solid rgba(15,2,5,0.1);
+    box-shadow: 3px 3px 3px gray;
     position: relative;
-    width: 600px;
+    width: 640px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-    padding: 2rem;
+    padding: 2.4rem;
+    padding-bottom: 2px;
     border-radius: 3px;
+    font-size: 1.2rem;
 }
 
 .rest-wrapper {
@@ -236,19 +238,26 @@ form div div{
 }
 
 .rest-wrapper .image {
-    margin-right: 1.5rem;
+    margin-right: 1.8rem;
 }
 
 .rest-wrapper .image img {
-    border-radius: 4px;
+    border-radius: 5px;
+    width:125px;
+    height: 125px;
+    margin-bottom: 1rem;
 }
 
 .rest-wrapper .rest-name a{
-    font-size: 24px;
+    font-size: 26px;
     /*color: #cb202d;*/
     color:darkorange;
 }
-
+.rest-wrapper .rest-name a:hover{
+  text-decoration: none;
+  color:brown;
+  font-size: 30px;
+}
 .rest-wrapper .rest-category {
     color: #89959B;
     text-transform: uppercase;
@@ -262,7 +271,9 @@ form div div{
     display: flex;
     margin-top: 1rem;
     border-top: 1px solid #e7e7e7;
-    padding: 1rem;
+    padding: 1.4rem;
+    font-size: 1.4rem;
+    border-bottom:1px solid #e3e3e3;
 }
 
 .rest-extra .type {
@@ -271,15 +282,29 @@ form div div{
      flex: none;
      margin-right: 2rem;
 }
-
+.function div{
+  cursor:pointer;
+  width:300px;
+  text-align: center;
+  border-left: 1px solid lightgray;
+  padding: 10px;
+}
+.function{
+  display: inline-flex;
+  justify-content: center;
+  color: rgba(23,23,23,0.6);
+  font-size: 1.6rem;
+  margin:0px;
+  padding: 0px;
+}
 .rating {
     color: white;
     background-color: #5BA829;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 2rem;
     padding: 0.5rem 1rem;
-    font-size: 18px;
+    font-size: 17px;
     border-radius: 4px;
     letter-spacing: 2px;
 }
@@ -300,30 +325,6 @@ form div div{
 .search-bar form .input-wrapper {
    flex: 1;
    margin-right: 1rem;
-}
-.bestDish .button{
-  display:inline;
-  float: right;
-  color: white;
-  font-size: 1.3rem;
-}
-.bestDish .button_get {
-    background-color:#cb202d;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.bestDish .button_view {
-  position: absolute;
-  padding: 0.54rem 1rem;
-  margin: 0px 0px 0px -62px;
-  background-color: green;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.recommend button#myButton.btn.btn-primary{
-  padding: 0.4rem 1rem;
-    border:0;
-    background-color: transparent;
 }
 /*my css*/
 input.ng-invalid.ng-touched{
@@ -351,10 +352,8 @@ input.ng-valid{
   min-width: 768px;
 }
 @keyframes floatBubble{
- 0% {left:30px;}
- 25%{right:80px;}
- 50%{right:0px;}
-   100% {left :-10px;}
+ 0% {left:60px;}
+   100% {left :-20px;}
 }
 .carousel-inner img{
   max-height:600px;
@@ -363,10 +362,16 @@ input.ng-valid{
   min-width: 600px;
   width: 1308px;
   margin:20px 20px 20px 20px;
-  animation: floatBubble 5s infinite normal ease-out ;
+  animation: floatBubble 4s normal ease-out ;
   /*animation-directon: normal;*/
-
 }
+.carousel-inner>.item{
+   /*disables white flash*/
+   -webkit-transition: -webkit-transform 1s ease-out;
+   -o-transition: -o-transform 1s ease-out;
+   transition: transform 1s ease-out;
+}
+
 /*for restaurant*/
 .rest1{
   background-image: url('img/backn.jpg');
@@ -381,40 +386,52 @@ input.ng-valid{
   padding: 2px;
 }
 .rest {
-    box-shadow: 2px 2px 2px brown;
-    border: 0.1rem solid brown;
     position: relative;
-    width:60%;
-    margin-left:15rem;
-    margin-top: 15rem;
+    width:70%;
+    margin-left:5rem;
+    margin-top: 8rem;
     margin-right:-105rem;
     min-width: 700px;
-    border-radius: 10px;
+    background: transparent;
+    border:0;
 }
 .rest-wrapper.wrapper1{
   display: block;
+  box-shadow: 2px 3px 3px brown;
+  border: 0.1rem solid brown;
+  border-radius: 10px;
+  background: white;
+  padding:24px;
 }
 .rest-wrapper.wrapper1 .image img{
-  width:101%;
+  width:102%;
   height:38rem;
   /*border-radius: 0;*/
   border: 1px solid brown;
 }
 .wrapper1 .rest-name{
-  font-size: 3.8rem;
-  text-shadow: 0px 1px 1px black;
-  color:orange;
+  font-size: 3.9rem;
+  text-shadow: 2px 2px 2px orange;
+  color:darkorange;
   padding: 5px 0px 15px 5px;
+  cursor: pointer;
 }
 .wrapper1 .rating{
-  margin: 18px 15px 5px 0px;
+  margin: 40px 30px 0px 0px;
 }
 .wrapper1 .rest-category{
   padding: 12px 0px 0px 12px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+}
+.rest #details{
+  background:#fafafa;
+  margin-top: 28px;
+  border-radius:8px;
+  border:2px solid lightGray;
+  padding:20px;
 }
 .rest .rest-extra{
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   padding:15px 0px 20px 20px;
 }
 .rest .type{
@@ -463,11 +480,14 @@ input.ng-valid{
   padding: 3px;
 }
 .rest .recommend{
-  padding: 15px;
-  border-top: 1px solid #e7e7e7;
+  padding: 30px;
+  border-top: 5px solid red;
+  background-color:rgba(255,255,255,0.85);
+  border-radius:15px;
+  margin-top:-10px;
 }
 .rest .recommend .type{
-  font-size: 2rem;
+  font-size: 2.6rem;
 }
 .rest .recommend .val{
   font-size: 1.7rem;
@@ -478,15 +498,48 @@ input.ng-valid{
     font-size: 1.9rem;
     color: black;
 }
-.recommend .value{
-  padding-left: 2.5rem;
-
-}
 .rest .recommend .value{
-  font-size: 2.2rem;
+    font-size: 3rem;
+    padding-left: 2rem;
+    color:darkorange;
   }
 .rest .recommend .bestImage img{
-  margin:34px 0px 0px 0px;
+  margin:30px 0px 30px 0px;
   width: 100%;
   border:2px  solid #cb204f;
+}
+
+.bestDish .button{
+  display:inline;
+  float: right;
+  color: white;
+  font-size: 1.3rem;
+}
+.bestDish .button_get {
+    background-color:#cb202d;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.recommend button#myButton.btn.btn-primary:hover {
+    color:#cb202d;
+    background-color: white;
+    border:2px solid #cb202d;
+}
+.bestDish .button_view {
+  position: absolute;
+  padding: 0.54rem 1rem;
+  margin: 0px 0px 0px -80px;
+  background-color: green;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.bestDish .button_view:hover {
+    color:green;
+    background-color: white;
+    border: 2px solid green;
+}
+.recommend button#myButton.btn.btn-primary{
+  padding: 0.4rem 1rem;
+    border:0;
+    background-color: transparent;
 }

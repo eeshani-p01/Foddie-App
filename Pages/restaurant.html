@@ -13,41 +13,43 @@
             </div>
             <div class="rest-category">
                   <strong> {{restaurant.location}}</strong>
-                   &nbsp;
+                   &nbsp;<span class="glyphicon glyphicon-record" aria-hidden="true">&nbsp</span>
                    <small>{{restaurant.category}} </small>
             </div>
         </div>
-        <div class="rest-extra">
-            <div class="type">
-                <div><small>Cuisines:</small></div>
-                <div><small>Cost for Two: </small></div>
-                <div><small>Opening Hours:</small></div>
-                <div><small>Address:</small></div>
+        <div id="details">
+            <div class="rest-extra">
+                <div class="type">
+                    <div><small>Cuisines:</small></div>
+                    <div><small>Cost for Two: </small></div>
+                    <div><small>Opening Hours:</small></div>
+                    <div><small>Address:</small></div>
+                </div>
+                <div class="value">
+                    <div>{{restaurant.cuisines}}</div>
+                    <div>₹{{restaurant.cost | number}}</div>
+                    <div>{{restaurant.hours}}</div>
+                    <div class="rest-address">{{restaurant.address}}</div>
+                </div>
             </div>
-            <div class="value">
-                <div>{{restaurant.cuisines}}</div>
-                <div>₹{{restaurant.cost | number}}</div>
-                <div>{{restaurant.hours}}</div>
-                <div class="rest-address">{{restaurant.address}}</div>
-            </div>
-        </div>
-        <div class="features">
-          <div class="feature">
-            <div><small>Highlights</small></div>
-              <ul>
-                <li ng-repeat="highlight in restaurant.Highlights">
-                  {{highlight}}
-                </li>
-              </ul>
-            </div>
-            <div class="feature">
-              <div><small>Featured in Collections</small></div>
-              <ul style="color:#cb202d;list-style-image:none;">
-                <li ng-repeat="feature in restaurant.Featured_Collections">
-                  {{feature}}
-                </li>
-              </ul>
-            </div>
+            <div class="features">
+              <div class="feature">
+                <div><small>Highlights</small></div>
+                  <ul>
+                    <li ng-repeat="highlight in restaurant.Highlights">
+                      {{highlight}}
+                    </li>
+                  </ul>
+                </div>
+                <div class="feature">
+                  <div><small>Featured in Collections</small></div>
+                  <ul style="color:#cb202d;list-style-image:none;">
+                    <li ng-repeat="feature in restaurant.Featured_Collections">
+                      {{feature}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
           </div>
         <div class="recommend">
             <div  class="type">
@@ -58,7 +60,7 @@
               <div id="type1"><small>Recommended:</small></div>
               <span>{{restaurant.bestDish.name}}</span>
               <div class="button">
-                <div ng-click="show()" class="button_view">View</div>
+                <div ng-click="show()" class="button_view"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbspView</div>
                 <div ng-click="getIngredients(restaurant.bestDish.image)" class="button_get">
                   <button type="button" id="myButton" data-loading-text="getting..." class="btn btn-primary" autocomplete="off">
                     Get Ingredients
