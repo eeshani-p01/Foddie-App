@@ -204,6 +204,9 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
             name: 'Corn Pizza',
             image: 'http://noblepig.com/images/2016/06/Avocado-and-Three-Bean-Salad-is-perfect-for-a-summertime-barbecue-side-dish.JPG'
           },
+          Highlights:["Full Bar Available","Live Music","Wifi","Drinking Age Applicable","Smoking Area","Nightlife"],
+          Featured_Collections:["Mordernized presentation of dishes with an elegant decor"],
+          Recommend:'Keema Paratha, Paneer Makhani, Mocktails, Shisha, Milky Way, Tomato Soup, Sangria',
           image:'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
       },
       {
@@ -215,6 +218,9 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
         cuisines:'Cafe, Fast Food, Street Food',
         cost:'750',
         hours:'7:30 AM to 9:45 PM',
+        Highlights:["Breakfast","Vegetarian Only","Wifi","Outdoor Seating"],
+        Featured_Collections:["Rooftops"],
+        Recommend:'Vada Pav, Mojito, Sauteed Mushrooms, Chai, Paneer Sandwich, Nachos, Falafe',
         image:'https://b.zmtcdn.com/data/pictures/2/101212/18a8a6d5a56434d02ef5915da77b19b8.jpg?output-format=webp'
       },
       {
@@ -230,6 +236,9 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
           name: 'Nachos',
           image: 'https://omnomnomtreats.files.wordpress.com/2014/05/loaded-vegetarian-nachos1.jpg'
         },
+        Highlights:["Home Delivery","Vegetarian Only","Live Music","Wifi","Live Sports Screening","Smoking Area"],
+        Featured_Collections:["Known for Mexican Food"],
+        Recommend:'Club Sandwich, Nachos, Coffee, Brownie, Mojito, Mexican Tart, Pinacolada',
         image:'https://b.zmtcdn.com/data/pictures/0/18400430/25f960835d2a4fde13976ca7ac13e7ad.jpg?output-format=webp'
       },
       {
@@ -245,6 +254,9 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
           name: 'Alfrado Pasta',
           image: 'http://topsecretrecipes.com/images/P/olive-garden-alfredo-pasta-copycat-recipe.jpg'
         },
+        Highlights:["Home Delivery","Wheelchair Accessible","Vegetarian Only","Smoking Area","Wifi","Desserts and Bakes","Outdoor Seating"],
+        Featured_Collections:["Known for Italian"],
+        Recommend:'Hazelnut Frappe, Slutty Brownie, Nachos, Hot Chocolate, Alfredo Pasta, Coffee, Mojito',
         image:'http://diningwithnoelle.com/wp-content/uploads/2015/12/photo-1-3-1000x520.jpg'
       },
       {
@@ -260,6 +272,9 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
           name: 'French Vanila Coffee',
           image: 'https://cookinformycaptain.files.wordpress.com/2012/03/img_4426x.jpg'
         },
+        Highlights:["Home Delivery","Wheelchair Accessible","Outdoor Seating"],
+        Featured_Collections:["Known for variety of Coffee"],
+        Recommend:'Shakes, Pasta, Mocktails, Coffee, Bruschettas, Waffles, Penne Alfredo',
         image:'https://b.zmtcdn.com/data/pictures/chains/1/102531/b2b174c4d4852509c1895c8391f65b00.jpg?output-format=webp'
       },
       {
@@ -275,6 +290,9 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
           name: 'Butter Chicken',
           image: 'http://www.akbarsown.com/wp-content/uploads/2015/05/butter-chicken-1.jpg'
         },
+        Highlights:["Breakfast","Outdoor Seating","Wifi","Smoking Area"],
+        Featured_Collections:["Rooftops"],
+        Recommend:'Lal Maans, Butter Chicken, Palak Paneer, Gulab Jamun, Tandoori Chicken, Scrambled Eggs, Pakoda',
         image:'https://b.zmtcdn.com/data/pictures/9/18041439/4b8619e5f480c3486d79d9daf79bb743.jpg?output-format=webp'
       },
       {
@@ -290,6 +308,9 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
           name: 'Pasta',
           image: 'http://www.thegoodshoppingguide.com/wp-content/uploads/2013/03/pasta.jpg'
         },
+        Highlights:["Wheelchair Accessible","Wine and Beer","Valet Parking Available","Outdoor Seating"],
+        Featured_Collections:["Romantic","Late night restaurants","Rooftops","Beer in bar"],
+        Recommend:'Jalapeno Chicken, Waffles, Pasta, Risotto, Nachos, Beer, Spring Roll',
         image:'https://b.zmtcdn.com/data/pictures/6/100306/e1f5eb8c9bac9a7ee00e3be677a5fc8b.jpg?output-format=webp'
       }
     ];

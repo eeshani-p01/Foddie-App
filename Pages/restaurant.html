@@ -49,13 +49,13 @@
               </ul>
             </div>
           </div>
-        <div ng-if="restaurant.bestDish" class="recommend">
+        <div class="recommend">
             <div  class="type">
               <div>What People Love here ?</div>
               <div class="val"><small>{{restaurant.Recommend}}</small></div>
-              <div id="type1"><small>Recommended:</small></div>
             </div>
-            <div class="bestDish value">
+            <div ng-if="restaurant.bestDish" class="bestDish value">
+              <div id="type1"><small>Recommended:</small></div>
               <span>{{restaurant.bestDish.name}}</span>
               <div class="button">
                 <div ng-click="show()" class="button_view">View</div>

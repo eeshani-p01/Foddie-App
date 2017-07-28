@@ -422,8 +422,10 @@ input.ng-valid{
   padding:20px 0px 20px 0px;
 }
 .rest .feature{
-  margin-left:50px;
-  margin-right: 140px;
+  margin-left:42px;
+  /*margin-right: 135px;*/
+  margin-right: auto;
+
 }
 .rest .feature div{
 
@@ -463,12 +465,12 @@ input.ng-valid{
   margin:0px 0rem 1rem 0.5rem;
   color: #89959b;
 }
-.rest .recommend .type #type1{
-    padding-left: 1.5rem;
+.rest .recommend #type1{
     font-size: 1.9rem;
+    color: black;
 }
 .recommend .value{
-  padding-left: 1.7rem;
+  padding-left: 2.5rem;
 
 }
 .rest .recommend .value{
