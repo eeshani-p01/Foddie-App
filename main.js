@@ -356,8 +356,11 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
 
 
 })
-
-
+$(document).ready(function() {
+   $('.carousel').carousel({
+     interval: 4000
+   })
+ });
 $(window).on("scroll", function() {
     if($(window).scrollTop() > 100) {
         $("#app .navbar").addClass("active");

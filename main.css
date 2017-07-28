@@ -350,6 +350,12 @@ input.ng-valid{
   height:100%;
   min-width: 768px;
 }
+@keyframes floatBubble{
+ 0% {left:30px;}
+ 25%{right:80px;}
+ 50%{right:0px;}
+   100% {left :-10px;}
+}
 .carousel-inner img{
   max-height:600px;
   z-index: -1;
@@ -357,6 +363,9 @@ input.ng-valid{
   min-width: 600px;
   width: 1308px;
   margin:20px 20px 20px 20px;
+  animation: floatBubble 5s infinite normal ease-out ;
+  /*animation-directon: normal;*/
+
 }
 /*for restaurant*/
 .rest1{
