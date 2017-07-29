@@ -1,5 +1,10 @@
 <div  class="rest1" ng-controller="restController">
   <div class="rest2 row">
+<!--
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </div> -->
     <div class="restaurant rest col-xs-12 col-md-9"  ng-if="restaurant.name">
         <div class="rest-wrapper wrapper1">
             <div class="rest-name">
@@ -62,7 +67,7 @@
               <div class="button">
                 <div ng-click="show()" class="button_view"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbspView</div>
                 <div ng-click="getIngredients(restaurant.bestDish.image)" class="button_get">
-                  <button type="button" id="myButton" name="get" data-loading-text="getting..." class="btn btn-primary" autocomplete="off">
+                  <button type="button" id="diabetes-tracking" name="get" data-loading-text="getting..." class="btn btn-primary" autocomplete="off">
                     Get Ingredients
                   </button>
                 </div>
@@ -80,11 +85,12 @@
             </div>
           </div>
         </div>
+
         <div class="Tracker col-xs-6 col-md-3">
           <div class="check">
               <span>&nbspAre you Foodie ?</span>
               <div id="track" ng-click="getIngredients(restaurant.bestDish.image)">
-                <a href="" ng-click="scrollTo('myButton')" data-toggle="popover" data-trigger="hover"  data-content="Know about your dish - Get Ingredients" data-placement="bottom">
+                <a href="" ng-click="scrollTo('diabetes-tracking')" data-toggle="popover" data-trigger="hover"  data-content="Know about your dish - Get Ingredients" data-placement="bottom">
                   Diabetes Tracker
                 </a>
               </div>
@@ -95,7 +101,9 @@
                   {{diabete}}
                   </li>
                 </ul>
+                <div>This cuisine is not good for your health, Please try to avoid it.</div>
               </div>
+              <div ng-hide="track">This cuisine is healthy for you...you can have it.</div>
           </div>
         </div>
         <div ng-hide="restaurant.name">404- Restaurant Not Found!!!</div>

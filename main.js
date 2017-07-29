@@ -337,11 +337,9 @@ foodieApp.controller('restController',function($scope,$routeParams,$http,$locati
                           $scope.ingredients.push(ingredients[i].name);
                           for(var j=0;j<$scope.diabetes.length;j++){
                             if($scope.ingredients[i]==$scope.diabetes[j])
-                             {
-                              // console.log($scope.diabetes[j]);
+                             {     //console.log($scope.diabetes[j]);
                               $scope.track.push($scope.diabetes[j]);
-
-                            }
+                              }
                           }
                         }
                       }
@@ -353,7 +351,7 @@ foodieApp.controller('restController',function($scope,$routeParams,$http,$locati
 
             $('.bestImage').addClass('hidden');
             $('.ingredients').removeClass('hidden');
-                var $btn = $('#myButton');
+                var $btn = $('#diabetes-tracking');
                 $btn.button('loading');
                 setTimeout(function(){
                   $btn.button('reset');
@@ -373,21 +371,18 @@ foodieApp.controller('restController',function($scope,$routeParams,$http,$locati
          $scope.scrollTo = function (id) {
            $location.hash(id);
            $('.tracking').removeClass('hidden');
-           for(var i=0 ; i < $scope.track.length;i++)
-           console.log('crossed');
-          //
-          //  for(var i=0;i<$scope.ingredients.length;i++){
-          //    for(var j=0;j<$scope.track.length;j++){
-          //      if($scope.ingredients[i]==$scope.track[j])
-          //      {
-          //        $('.restaurant .ingredients li').addClass('crossed');
-          //        console.log('crossed');
-          //      }
-          //    }
-          //  }
           //  $anchorScroll(id);
           //  console.log('scroll');
          }
+        //  for(var i=0;i<$scope.ingredients.length;i++){
+        //    for(var j=0;j<$scope.track.length;j++){
+        //      if($scope.ingredients[i]==$scope.track[j])
+        //      {
+        //        $('.restaurant .ingredients li').addClass('crossed');
+        //        console.log('crossed');
+        //      }
+        //    }
+        //  }
 })
 $(document).ready(function() {
    $('.carousel').carousel({

@@ -530,7 +530,7 @@ form div div{
     border-radius: 4px;
     cursor: pointer;
 }
-.recommend button#myButton.btn.btn-primary:hover {
+.recommend button#diabetes-tracking.btn.btn-primary:hover {
     color:#cb202d;
     background-color: white;
     border:2px solid #cb202d;
@@ -548,7 +548,7 @@ form div div{
     background-color: white;
     border: 2px solid green;
 }
-.recommend button#myButton.btn.btn-primary{
+.recommend button#diabetes-tracking.btn.btn-primary{
   padding: 0.4rem 1rem;
     border:0;
     background-color: transparent;
@@ -605,4 +605,7 @@ form div div{
 .crossed{
   text-decoration: line-through;
   color:yellow;
+}
+.tracking li{
+  list-style-image: url('img/cross.png');
 }
