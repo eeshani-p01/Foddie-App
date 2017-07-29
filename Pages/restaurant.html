@@ -74,7 +74,7 @@
               </div>
               <div class="ingredients hidden" ng-if="ingredients">
                 <ul>
-                  <li ng-repeat="ingredient in ingredients">
+                  <li id="recipe" ng-repeat="ingredient in ingredients">
                   {{ingredient}}
                   </li>
                 </ul>
@@ -89,8 +89,8 @@
         <div class="Tracker col-xs-6 col-md-3">
           <div class="check">
               <span>&nbspAre you Foodie ?</span>
-              <div id="track" ng-click="getIngredients(restaurant.bestDish.image)">
-                <a href="" ng-click="scrollTo('diabetes-tracking')" data-toggle="popover" data-trigger="hover"  data-content="Know about your dish - Get Ingredients" data-placement="bottom">
+              <div id="track" ng-click="scrollTo('diabetes-tracking')">
+                <a href=""  ng-click="getIngredients(restaurant.bestDish.image)" data-toggle="popover" data-trigger="hover"  data-content="Know about your dish - Get Ingredients" data-placement="bottom">
                   Diabetes Tracker
                 </a>
               </div>

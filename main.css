@@ -72,9 +72,15 @@ body {
         margin-left:-10px;
     }
     .row .Tracker{
-      width:768px;
-      height:10%;
       position: absolute;
+    }
+    .row .check{
+      width:100%;
+      margin-top: -50px;
+      background-color: #e3e3e3;
+    }
+    .row .rest{
+      margin-top: 18rem;
     }
 }
 @media only screen and (max-width:500px){
@@ -596,6 +602,7 @@ form div div{
 .check a{
   color:white;
   text-decoration: none;
+  padding-top: 500px;
 }
 .check div{
   margin-top:8px;
