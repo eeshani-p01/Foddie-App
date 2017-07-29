@@ -71,6 +71,11 @@ body {
     .carousel-inner{
         margin-left:-10px;
     }
+    .row .Tracker{
+      width:768px;
+      height:10%;
+      position: absolute;
+    }
 }
 @media only screen and (max-width:500px){
   ul.nav.navbar-nav.navbar-right{
@@ -376,6 +381,8 @@ input.ng-valid{
 .rest1{
   background-image: url('img/backn.jpg');
   background-size: cover;
+  /*width:100%;*/
+  min-width: 700px;
   background-position: bottom;
   background-attachment: fixed;
 }
@@ -384,13 +391,14 @@ input.ng-valid{
   /*background-color: rgba(0,0,0,0.1);*/
   /*background-color: rgba(255,255,255,0.2);*/
   padding: 2px;
+  display:flex;
 }
 .rest {
     position: relative;
     width:70%;
     margin-left:5rem;
     margin-top: 8rem;
-    margin-right:-105rem;
+    /*margin-right:-105rem;*/
     min-width: 700px;
     background: transparent;
     border:0;
@@ -542,4 +550,48 @@ input.ng-valid{
   padding: 0.4rem 1rem;
     border:0;
     background-color: transparent;
+}
+/*Tracker*/
+.row{
+  max-width: 1362px;
+}
+.Tracker{
+  /*background-color: #fafafa;*/
+  margin:10rem 0px 0px 0px;
+  position: relative;
+  /*min-width: 8px;*/
+  /*width:5px;*/
+  padding: 10px 40px 10px 10px;
+  height: 200px;
+}
+.check{
+  background-color: #fafafa;
+  padding: 12px 10px 10px 10px;
+  font-size: 1.9rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.check #track{
+  background-color: orange;
+  height: 35px;
+  text-align: center;
+  padding-top: 4px;
+  font-size: 1.9rem;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius:2px;
+}
+.check #track:hover{
+  border:1px solid brown;
+  color: darkorange;
+  background-color:rgba(244,113,66,1);
+}
+.check a{
+  color:white;
+  text-decoration: none;
+}
+.check div{
+  margin-top:8px;
+  font-size: 1.4rem;
+  text-align: center;
 }

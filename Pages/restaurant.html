@@ -1,6 +1,6 @@
 <div  class="rest1" ng-controller="restController">
-  <div class="rest2">
-    <div class="restaurant rest"  ng-if="restaurant.name">
+  <div class="rest2 row">
+    <div class="restaurant rest col-xs-12 col-md-9"  ng-if="restaurant.name">
         <div class="rest-wrapper wrapper1">
             <div class="rest-name">
             <strong>{{restaurant.name}}</strong>
@@ -79,6 +79,18 @@
               </div>
             </div>
           </div>
-      <div ng-hide="restaurant.name">404- Restaurant Not Found!!!</div>
+        </div>
+        <div class="Tracker col-xs-6 col-md-3">
+          <div class="check">
+              <span>&nbspAre you Foodie ?</span>
+              <div id="track">
+                <a href="" data-toggle="popover" data-trigger="hover"  data-container="body" data-content="Some content" data-placement="bottom">
+                  Diabetes Tracker
+                </a>
+              </div>
+              <div>Find whether the food is healthy for you !!</div>
+          </div>
+        </div>
+        <div ng-hide="restaurant.name">404- Restaurant Not Found!!!</div>
     </div>
 </div>

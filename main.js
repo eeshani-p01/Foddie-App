@@ -172,6 +172,7 @@ foodieApp.controller('homeController',function($scope){
 foodieApp.controller('restController',function($scope,$routeParams,$http){
     $scope.restaurantId=$routeParams.id;
     $scope.ingredients = [];
+    var diabetes=["cream","brownie","sweet","soda","ice tea","lemonade","sugar","margarines","peanut butter","white bread","rice","pasta","flavored coffee","honey","fry fruits","fruit juice","french fries","nachos","cookies","banana","melon","noodles","spaghetti","macaroni","alfredo pasta","red meat","jelly","jam","cake","syrup","mayonnaise","butter","cheese","egg yolk","Pizza","potato","yam","corn"];
     var restaurants = [
       {
           name:'Tribute',
@@ -328,11 +329,18 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
                 }).then(
                   function (response) {
                 		  var ingredients = response.data.outputs[0].data.concepts;
-                      console.log(ingredients);
+                      // console.log(ingredients);
                 			for (var i =0;i<ingredients.length;i++){
                         if(ingredients[i].value>0.75)
                         {
                           $scope.ingredients.push(ingredients[i].name);
+                          for(var j=0;j<diabetes.length;j++){
+                            if($scope.ingredients[i]==diabetes[j])
+                             {
+                              //console.log(diabetes[j]);
+
+                            }
+                          }
                         }
                       }
                     },
@@ -348,6 +356,8 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
                 setTimeout(function(){
                   $btn.button('reset');
                 },1000);
+                console.log('yes');
+
         }
         $scope.show = function(){
           $('.bestImage').removeClass('hidden');
@@ -360,6 +370,8 @@ $(document).ready(function() {
    $('.carousel').carousel({
      interval: 3000
    })
+   $('[data-toggle="popover"]').popover();
+
  });
 $(window).on("scroll", function() {
     if($(window).scrollTop() > 100) {
