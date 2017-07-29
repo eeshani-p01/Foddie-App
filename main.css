@@ -313,10 +313,8 @@ form div div{
     border-radius: 4px;
     letter-spacing: 2px;
 }
-
-
 .search-bar {
-    width: 600px;
+    width: 640px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
@@ -325,17 +323,21 @@ form div div{
 .search-bar form {
     display: flex;
     align-items: center;
+
 }
 
 .search-bar form .input-wrapper {
    flex: 1;
    margin-right: 1rem;
 }
+.main input.form-control{
+  border: 1px solid darkorange;
+}
 /*my css*/
-input.ng-invalid.ng-touched{
+.login input.ng-invalid.ng-touched{
   border:1px solid red;
 }
-input.ng-valid{
+.login input.ng-valid{
   border:1px solid green;
 }
 .main1.active1{
@@ -564,12 +566,17 @@ input.ng-valid{
   padding: 10px 40px 10px 10px;
   height: 200px;
 }
+.sticky{
+  top:0;
+}
 .check{
   background-color: #fafafa;
   padding: 12px 10px 10px 10px;
   font-size: 1.9rem;
   border: 1px solid gray;
   border-radius: 5px;
+    position: fixed;
+    width:290px;
 }
 .check #track{
   background-color: orange;

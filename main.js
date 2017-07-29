@@ -358,21 +358,24 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
                 },1000);
                 console.log('yes');
 
+
         }
         $scope.show = function(){
           $('.bestImage').removeClass('hidden');
           $('.ingredients').addClass('hidden');
         }
+        $(document).ready(function() {
+           $('[data-toggle="popover"]').popover();
 
-
+         });
 })
 $(document).ready(function() {
    $('.carousel').carousel({
      interval: 3000
    })
-   $('[data-toggle="popover"]').popover();
-
  });
+
+
 $(window).on("scroll", function() {
     if($(window).scrollTop() > 100) {
         $("#app .navbar").addClass("active");
@@ -384,4 +387,15 @@ $(window).on("scroll", function() {
        $(".main").removeClass('active1');
        $(".main1").removeClass('active1');
     }
+    // var s = $(".check");
+    // var pos = s.position();
+    // $('.rest1').scroll(function() {
+    //     var windowpos = $('.rest1').scrollTop();
+    //
+    //     if (windowpos >= pos.top) {
+    //         s.addClass("stick");
+    //     } else {
+    //         s.removeClass("stick");
+    //     }
+    // });
 });
