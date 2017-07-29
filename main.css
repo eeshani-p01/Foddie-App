@@ -602,3 +602,7 @@ form div div{
   font-size: 1.4rem;
   text-align: center;
 }
+.crossed{
+  text-decoration: line-through;
+  color:yellow;
+}

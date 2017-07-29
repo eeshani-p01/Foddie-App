@@ -169,10 +169,11 @@ foodieApp.controller('homeController',function($scope){
 
 })
 
-foodieApp.controller('restController',function($scope,$routeParams,$http){
+foodieApp.controller('restController',function($scope,$routeParams,$http,$location){
     $scope.restaurantId=$routeParams.id;
     $scope.ingredients = [];
-    var diabetes=["cream","brownie","sweet","soda","ice tea","lemonade","sugar","margarines","peanut butter","white bread","rice","pasta","flavored coffee","honey","fry fruits","fruit juice","french fries","nachos","cookies","banana","melon","noodles","spaghetti","macaroni","alfredo pasta","red meat","jelly","jam","cake","syrup","mayonnaise","butter","cheese","egg yolk","Pizza","potato","yam","corn"];
+    $scope.track =[];
+    $scope.diabetes=["cream","brownie","sweet","soda","ice tea","lemonade","sugar","margarines","peanut butter","white bread","rice","pasta","flavored coffee","honey","fry fruits","fruit juice","french fries","nachos","cookies","banana","melon","noodles","spaghetti","macaroni","alfredo pasta","red meat","jelly","jam","cake","syrup","mayonnaise","butter","cheese","egg yolk","Pizza","potato","yam","corn"];
     var restaurants = [
       {
           name:'Tribute',
@@ -334,10 +335,11 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
                         if(ingredients[i].value>0.75)
                         {
                           $scope.ingredients.push(ingredients[i].name);
-                          for(var j=0;j<diabetes.length;j++){
-                            if($scope.ingredients[i]==diabetes[j])
+                          for(var j=0;j<$scope.diabetes.length;j++){
+                            if($scope.ingredients[i]==$scope.diabetes[j])
                              {
-                              //console.log(diabetes[j]);
+                              // console.log($scope.diabetes[j]);
+                              $scope.track.push($scope.diabetes[j]);
 
                             }
                           }
@@ -356,7 +358,7 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
                 setTimeout(function(){
                   $btn.button('reset');
                 },1000);
-                console.log('yes');
+                // console.log('yes');
 
 
         }
@@ -368,6 +370,24 @@ foodieApp.controller('restController',function($scope,$routeParams,$http){
            $('[data-toggle="popover"]').popover();
 
          });
+         $scope.scrollTo = function (id) {
+           $location.hash(id);
+           $('.tracking').removeClass('hidden');
+           for(var i=0 ; i < $scope.track.length;i++)
+           console.log('crossed');
+          //
+          //  for(var i=0;i<$scope.ingredients.length;i++){
+          //    for(var j=0;j<$scope.track.length;j++){
+          //      if($scope.ingredients[i]==$scope.track[j])
+          //      {
+          //        $('.restaurant .ingredients li').addClass('crossed');
+          //        console.log('crossed');
+          //      }
+          //    }
+          //  }
+          //  $anchorScroll(id);
+          //  console.log('scroll');
+         }
 })
 $(document).ready(function() {
    $('.carousel').carousel({
