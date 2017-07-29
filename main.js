@@ -349,7 +349,7 @@ foodieApp.controller('restController',function($scope,$routeParams,$http,$locati
                         $('.tracking').addClass('hidden');
                       }
                       else{
-                      //   $('.healthy').removeClass('hidden');
+                        $('.healthy').removeClass('hidden');
                       //   for(var i=0;i<$scope.ingredients.length;i++){
                       //     for(var j=0;j<$scope.track.length;j++){
                       //       if($scope.ingredients[i]==$scope.track[j])

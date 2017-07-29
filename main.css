@@ -191,21 +191,22 @@ form div div{
 
 /*for header*/
 .hero {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     font-size: 5rem;
     color: white;
-    display: flex;
     margin-top:4rem;
+    background-color: black;
 }
 #app .navbar {
-    /*background:#e3e3e3;*/
-    /*background: transparent;*/
-    background: linear-gradient(360deg,#c3c3c3,white);
+    /*background:rgba(224,212,47,1);*/
+    background-color:rgba(13,0,0,0.9);
+    /*background: linear-gradient(360deg,black,#c3c3c3);*/
+    height: 60px;
     border:0;
     padding-left: 15px;
 }
 #app .navbar.active{
-  background: linear-gradient(360deg,rgba(13,0,0,0.8),#c3c3c3);
+  background: linear-gradient(360deg,rgba(13,0,0,0.9),#c3c3c3);
   border-bottom: 1px solid gray;
   /*width:20px;*/
   height: 62px;
@@ -320,16 +321,23 @@ form div div{
     letter-spacing: 2px;
 }
 .search-bar {
-    width: 640px;
+    min-width: 640px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
+    display: flex;
+    background:linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,0.9),rgba(0,0,0,0));
+    padding-left:22%;
+    padding-right: 22%;
+    padding-top:1%;
+    padding-bottom: 1%;
+    /*width: 60%;*/
 }
 
 .search-bar form {
     display: flex;
     align-items: center;
-
+    width: 100%;
 }
 
 .search-bar form .input-wrapper {
@@ -337,7 +345,12 @@ form div div{
    margin-right: 1rem;
 }
 .main input.form-control{
-  border: 1px solid darkorange;
+  border: 1px solid black;
+}
+.main input.form-control::placeholder{
+  color:black;
+  font-size: 1.8rem;
+  padding-left: 1.5rem;
 }
 /*my css*/
 .login input.ng-invalid.ng-touched{
@@ -369,14 +382,15 @@ form div div{
    100% {left :-20px;}
 }
 .carousel-inner img{
-  max-height:600px;
+  max-height:500px;
   z-index: -1;
   position: relative;
   min-width: 600px;
-  width: 1308px;
-  margin:20px 20px 20px 20px;
+  width: 1350px;
+  margin-top:2rem;
   animation: floatBubble 4s normal ease-out ;
   /*animation-directon: normal;*/
+  padding-bottom: 2.2rem;
 }
 .carousel-inner>.item{
    /*disables white flash*/
