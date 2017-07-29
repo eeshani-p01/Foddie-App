@@ -343,6 +343,14 @@ foodieApp.controller('restController',function($scope,$routeParams,$http,$locati
                           }
                         }
                       }
+                      if($scope.track=='')
+                      {
+                        $('.not_healthy').removeClass('hidden');
+                        $('.tracking').addClass('hidden');
+                      }
+                      else{
+                        $('.healthy').removeClass('hidden');
+                      }
                     },
                   function (xhr) {
                           console.log(xhr);

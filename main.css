@@ -607,5 +607,27 @@ form div div{
   color:yellow;
 }
 .tracking li{
-  list-style-image: url('img/cross.png');
+  list-style-type: none;
+  display: flex;
+  padding: inherit;
+  font-size: 1.8rem;
+  /*margin: 10px;*/
+}
+.tracking li span{
+  margin-right: 5px;
+  padding-top: 4px;
+}
+.not_healthy{
+  color:rgba(55,210,83,1);
+  padding: 18px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.2);
+}
+.not_healthy div{
+  font-size: 1.8rem;
+}
+.healthy{
+  background-color: rgba(255,255,255,0.2);
+  color:red;
+  padding:10px;
 }

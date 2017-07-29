@@ -98,12 +98,20 @@
               <div class="tracking hidden" ng-if="track">
                 <ul>
                   <li ng-repeat="diabete in track">
-                  {{diabete}}
+                  <span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:red;"></span>&nbsp{{diabete}}
                   </li>
                 </ul>
-                <div>This cuisine is not good for your health, Please try to avoid it.</div>
+                <div class="healthy hidden">
+                    This ingredients are harmful for your health.
+                  <div>Please try to avoid this cuisine.</div>
+                </div>
               </div>
-              <div ng-hide="track">This cuisine is healthy for you...you can have it.</div>
+              <div class="not_healthy hidden">
+                <img src="img/tick.png">&nbsp
+                <span>No harmful ingredient found.</span>
+                <span>This cuisine is healthy for you.<span>
+                  <div>Eat Delicious ...</div>
+              </div>
           </div>
         </div>
         <div ng-hide="restaurant.name">404- Restaurant Not Found!!!</div>
