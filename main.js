@@ -413,15 +413,5 @@ $(window).on("scroll", function() {
        $(".main").removeClass('active1');
        $(".main1").removeClass('active1');
     }
-    // var s = $(".check");
-    // var pos = s.position();
-    // $('.rest1').scroll(function() {
-    //     var windowpos = $('.rest1').scrollTop();
-    //
-    //     if (windowpos >= pos.top) {
-    //         s.addClass("stick");
-    //     } else {
-    //         s.removeClass("stick");
-    //     }
-    // });
+
 });

@@ -118,9 +118,10 @@ body {
       width: 26%;
       padding: 2rem 2rem 2rem 2rem;
       margin-top: 10rem;
+      font-size: 1.4rem;
   }
   form div div{
-    font-size: 13px;
+    font-size: 12px;
   }
   .login-form .btn.btn-default{
     width:99px;
@@ -191,7 +192,7 @@ form div div{
 
 /*for header*/
 .hero {
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
     font-size: 5rem;
     color: white;
     margin-top:4rem;
@@ -398,7 +399,17 @@ form div div{
    -o-transition: -o-transform 1s ease-out;
    transition: transform 1s ease-out;
 }
-
+.carousel-caption{
+  color:#e3e3e3;
+  font-size: 4rem;
+  top:10rem;
+  text-shadow: 1px 2px 2px black;
+}
+.carousel-caption>div{
+  font-size: 3rem;
+  margin-top: 8rem;
+  color: white;
+}
 /*for restaurant*/
 .rest1{
   background-image: url('img/backn.jpg');
