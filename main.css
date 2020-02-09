@@ -389,7 +389,7 @@ form div div{
   z-index: -1;
   position: relative;
   min-width: 600px;
-  width: 1350px;
+  width: 100%;
   margin-top:2rem;
   animation: floatBubble 4s normal ease-out ;
   /*animation-directon: normal;*/
@@ -590,7 +590,7 @@ form div div{
 }
 /*Tracker*/
 .row{
-  max-width: 1362px;
+    margin: 0;
 }
 .Tracker{
   /*background-color: #fafafa;*/
